@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "'YakuHanJP','LINE Seed JP', sans-serif";
+  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
 }
 
 a[href^="tel:"] {
@@ -140,16 +140,60 @@ select::-ms-expand {
   display: none;
 }
 
-.example {
-  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-}
-
 @font-face {
   font-family: "LINE Seed JP";
   src: url("../fonts/LINESeedJP_A_Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+.example {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+
+inner {
+  width: 100%;
+  max-width: 1450px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.heading {
+  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
+  font-weight: bolder;
+}
+
+.menu-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.outline-text {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+
+.md-show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+}
+
 body {
-  font-family: "'YakuHanJP','LINE Seed JP', sans-serif";
+  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
 }/*# sourceMappingURL=style.css.map */

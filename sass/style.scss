@@ -3,15 +3,60 @@
 @use "./global" as *;
 
   // CSS：font-familyを設定
-  .example {
-    font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-  }
-@font-face {
+  @font-face {
     font-family: 'LINE Seed JP';
     src: url('../fonts/LINESeedJP_A_Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
+  .example {
+    font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  }
+
+
+//共通パーツ
+inner {
+  width: 100%;
+  max-width: 1450px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  @include mq("md") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.heading {
+  font-family: $base-font;
+  font-weight: bolder;
+}
+
+.menu-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+.outline-text {
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+}
+
+.md-none {
+  @include mq("md") {
+    display: none;
+  }
+}
+.md-show {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
 
 
   body {

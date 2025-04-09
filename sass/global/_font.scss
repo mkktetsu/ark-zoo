@@ -1,6 +1,6 @@
 @use "sass:math";
 // 文字フォントの種類
-$base-font: "'YakuHanJP','LINE Seed JP', sans-serif";
+$base-font: "'YakuHanJP','LINE Seed JP', Noto Sans";
 $second-font: "";
 $third-font: "";
 
@@ -9,3 +9,4 @@ $regular: 300;
 $normal: 400;
 $medium: 500;
 $bold: 700;
+
