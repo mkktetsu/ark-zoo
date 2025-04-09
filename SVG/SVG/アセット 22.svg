@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 966.16 440.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d2d2d2;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        font-size: 47px;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-10, .cls-11, .cls-8, .cls-9 {
+        font-family: 'LINESeedJP_OTF-Bold-90ms-RKSJ-H', 'LINE Seed JP_OTF';
+        font-weight: 700;
+      }
+
+      .cls-12 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        letter-spacing: .12em;
+      }
+
+      .cls-11, .cls-8 {
+        font-size: 29px;
+      }
+
+      .cls-13 {
+        letter-spacing: .06em;
+      }
+
+      .cls-8 {
+        stroke-width: 5px;
+      }
+
+      .cls-8, .cls-9 {
+        stroke: #fff;
+      }
+
+      .cls-9 {
+        stroke-width: 8px;
+      }
+
+      .cls-14 {
+        letter-spacing: .16em;
+      }
+
+      .cls-15 {
+        font-size: 36px;
+        letter-spacing: .04em;
+      }
+
+      .cls-16 {
+        letter-spacing: .08em;
+      }
+
+      .cls-17 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-6 {
+        letter-spacing: .14em;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-7" x="309.74" y="77.16" width="354" height="296" rx="61.18" ry="61.18"/>
+    </clipPath>
+  </defs>
+  <g class="cls-12">
+    <g id="_レイヤー_2" data-name="レイヤー 2">
+      <g id="_01データ" data-name="01データ">
+        <g class="cls-17">
+          <path class="cls-1" d="M966.16,0s-15.24,2.26-41.51,9.04c-13.24,3.41-29.25,8.05-47.65,13.35-18.38,5.3-39.04,11.23-61.8,15.84-22.53,4.57-47.16,7.62-73.12,7.51-25.97-.11-53.37-3.5-81.61-8.18-28.33-4.7-57.46-10.39-87.28-12.91-29.65-2.5-60.1-1.45-90.11,3.65-30.39,5.16-60.39,14.1-90.11,22.66-29.64,8.54-58.81,16.24-87.28,20.05-28.18,3.76-55.73,3.69-81.61,1.23-26.02-2.48-50.48-7.02-73.12-10.89-22.62-3.86-43.37-6.96-61.8-8.48-18.37-1.51-34.45-1.55-47.65-.89C15.02,53.31,0,56.59,0,56.59v48.1s15.15-1.52,41.51.25c13.23.89,29.33,2.82,47.65,6.47,18.47,3.69,39.2,9.21,61.8,15.72,22.65,6.52,47.03,13.91,73.12,19.45,25.79,5.48,53.3,8.8,81.61,8.33,28.34-.47,57.6-4.75,87.28-9.82,29.71-5.08,59.84-10.51,90.11-12.11,30.15-1.58,60.58.96,90.11,6.91,29.91,6.04,58.94,15.11,87.28,23.13,28.2,7.98,55.54,14.58,81.61,17.74,25.85,3.13,50.52,2.99,73.12,1.06,22.7-1.95,43.42-5.46,61.8-8.6,18.4-3.15,34.42-5.91,47.65-7.77,26.34-3.71,41.51-4.17,41.51-4.17V0h0Z"/>
+        </g>
+        <g>
+          <text class="cls-9" transform="translate(346.72 152.18)"><tspan class="cls-6" x="0" y="0">毎</tspan><tspan class="cls-5" x="53.58" y="0">日</tspan><tspan class="cls-15" x="106.31" y="3.82">の</tspan><tspan class="cls-3" x="143.75" y="0">く</tspan><tspan class="cls-4" x="186.05" y="0">ら</tspan><tspan class="cls-6" x="233.05" y="0">し</tspan></text>
+          <text class="cls-10" transform="translate(346.72 152.18)"><tspan class="cls-6" x="0" y="0">毎</tspan><tspan class="cls-5" x="53.58" y="0">日</tspan><tspan class="cls-15" x="106.31" y="3.82">の</tspan><tspan class="cls-3" x="143.75" y="0">く</tspan><tspan class="cls-4" x="186.05" y="0">ら</tspan><tspan class="cls-6" x="233.05" y="0">し</tspan></text>
+        </g>
+        <g>
+          <text class="cls-8" transform="translate(477.34 199.34)"><tspan class="cls-16" x="0" y="0">をサ</tspan><tspan class="cls-13" x="62.64" y="0">ポ</tspan><tspan class="cls-2" x="93.38" y="0">ー</tspan><tspan class="cls-14" x="121.8" y="0">ト</tspan></text>
+          <text class="cls-11" transform="translate(477.34 199.34)"><tspan class="cls-16" x="0" y="0">をサ</tspan><tspan class="cls-13" x="62.64" y="0">ポ</tspan><tspan class="cls-2" x="93.38" y="0">ー</tspan><tspan class="cls-14" x="121.8" y="0">ト</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
