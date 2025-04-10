@@ -9,13 +9,118 @@
     font-weight: normal;
     font-style: normal;
   }
-  .example {
-    font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-  }
 
+
+
+//ヘッダー
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  height: 260px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+.header__name {
+  width: 556px;
+  height: auto;
+  flex-shrink: 0; // ロゴを縮めない
+  @include mq("lg") {
+      width: 132px;
+      height: 22px;
+      margin-left: 0;
+  }
+}
+.header__logo {
+  width: 556px;
+  height: auto;
+}
+.header__text-message {
+  position: absolute;
+  top: 75px;
+  left: 30%;
+  font-weight: bold;
+}
+.header__sns {
+  gap: 10px;
+  top: 20px;
+  right: 20px;
+}
+.header__sns-link {
+  margin-right: auto;
+}
+.header__sns-link--line {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  display: inline-block;
+  width: 392px;
+  height: auto;
+}
+.header__sns-link--x {
+  position: absolute;
+  top: 152px;
+  right: 45px;
+  display: inline-block;
+  width: 81px;
+  height: auto;
+}
+//ファーストビュー
+.fv {
+  aspect-ratio: 56 / 50; //
+  width: 100%;
+  position: relative;
+  background-image: url(/images/2x/fv-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  min-height: 100vh;
+  padding-top: 150px;  // ヘッダーの分
+//以下文字を下寄せにするための起債
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; // ← 下寄せ
+  align-items: center; // ← 横中央
+}
+.fv__content {
+  max-width: 1000px; // 必要であれば中央幅制限
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; // 中のテキストを中央揃え
+}
+.fv__heading {
+  align-items: center;
+  text-align: center;
+}
+.fv__about-text {
+  margin-top: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; // 任意。広がりすぎ防止したいとき
+}
+.fv__about-text--name {
+  align-items: center;
+  text-align: center;
+
+}
+
+//サービス
+.service__section-title {
+  font-size: 12px;
+
+}
 
 //共通パーツ
-inner {
+.inner {
   width: 100%;
   max-width: 1450px;
   margin-right: auto;
@@ -27,7 +132,10 @@ inner {
     padding-left: 15px;
   }
 }
-
+.text {
+  font-size: 12px;
+  color: $black;
+}
 .heading {
   font-family: $base-font;
   font-weight: bolder;

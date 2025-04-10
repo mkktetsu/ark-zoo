@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.68 90.06">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: 'LINESeedJP_OTF-ExtraBold-90ms-RKSJ-H', 'LINE Seed JP_OTF';
+        font-size: 10px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="_00.FV" data-name="00.FV">
+    <g>
+      <g>
+        <g>
+          <path d="M42.25,84.53c-16.54,0-30-13.46-30-30s13.46-30,30-30,30,13.46,30,30-13.46,30-30,30Z"/>
+          <path class="cls-1" d="M42.25,26.53c15.4,0,28,12.6,28,28s-12.6,28-28,28h0c-15.4,0-28-12.6-28-28s12.6-28,28-28h0M42.25,22.53c-17.65,0-32,14.35-32,32s14.35,32,32,32,32-14.35,32-32-14.35-32-32-32h0Z"/>
+        </g>
+        <path class="cls-1" d="M45.06,51.84l10.98-12.77h-2.6l-9.54,11.09-7.62-11.09h-8.79l11.52,16.77-11.52,13.39h2.6l10.07-11.71,8.05,11.71h8.79l-11.95-17.39h0ZM41.49,55.99l-1.17-1.67-9.29-13.28h4l7.49,10.72,1.17,1.67,9.74,13.94h-4l-7.95-11.37h0Z"/>
+      </g>
+      <g>
+        <text class="cls-2" transform="translate(8.25 43.19) rotate(-64.6)"><tspan x="0" y="0">N</tspan></text>
+        <text class="cls-2" transform="translate(12.16 35.23) rotate(-51.52)"><tspan x="0" y="0">E</tspan></text>
+        <text class="cls-2" transform="translate(16.39 29.35) rotate(-35.69)"><tspan x="0" y="0">W</tspan></text>
+        <text class="cls-2" transform="translate(26.87 22.32) rotate(-20.22)"><tspan x="0" y="0">S</tspan></text>
+        <text class="cls-2" transform="translate(33.32 19.76) rotate(-6.5)"><tspan x="0" y="0">＆</tspan></text>
+        <text class="cls-2" transform="translate(43.45 18.78) rotate(8.15)"><tspan x="0" y="0">T</tspan></text>
+        <text class="cls-2" transform="translate(51.3 19.81) rotate(22.34)"><tspan x="0" y="0">O</tspan></text>
+        <text class="cls-2" transform="translate(60.22 23.63) rotate(36.46)"><tspan x="0" y="0">P</tspan></text>
+        <text class="cls-2" transform="translate(66.42 28.45) rotate(46)"><tspan x="0" y="0">I</tspan></text>
+        <text class="cls-2" transform="translate(69.33 31.15) rotate(56.52)"><tspan x="0" y="0">C</tspan></text>
+        <text class="cls-2" transform="translate(74.27 38.89) rotate(69.31)"><tspan x="0" y="0">S</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

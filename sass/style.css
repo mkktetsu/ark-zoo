@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
+  font-family: "YakuHanJP", "LINE Seed JP", "Noto Sans JP";
 }
 
 a[href^="tel:"] {
@@ -146,11 +146,122 @@ select::-ms-expand {
   font-weight: normal;
   font-style: normal;
 }
-.example {
-  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  height: 260px;
 }
 
-inner {
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header__name {
+  width: 556px;
+  height: auto;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+  .header__name {
+    width: 132px;
+    height: 22px;
+    margin-left: 0;
+  }
+}
+
+.header__logo {
+  width: 556px;
+  height: auto;
+}
+
+.header__text-message {
+  position: absolute;
+  top: 75px;
+  left: 30%;
+  font-weight: bold;
+}
+
+.header__sns {
+  gap: 10px;
+  top: 20px;
+  right: 20px;
+}
+
+.header__sns-link {
+  margin-right: auto;
+}
+
+.header__sns-link--line {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  display: inline-block;
+  width: 392px;
+  height: auto;
+}
+
+.header__sns-link--x {
+  position: absolute;
+  top: 152px;
+  right: 45px;
+  display: inline-block;
+  width: 81px;
+  height: auto;
+}
+
+.fv {
+  aspect-ratio: 56/50;
+  width: 100%;
+  position: relative;
+  background-image: url(/images/2x/fv-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  min-height: 100vh;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fv__content {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.fv__heading {
+  align-items: center;
+  text-align: center;
+}
+
+.fv__about-text {
+  margin-top: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.fv__about-text--name {
+  align-items: center;
+  text-align: center;
+}
+
+.service__section-title {
+  font-size: 12px;
+}
+
+.inner {
   width: 100%;
   max-width: 1450px;
   margin-right: auto;
@@ -159,14 +270,19 @@ inner {
   padding-left: 25px;
 }
 @media screen and (max-width: 768px) {
-  inner {
+  .inner {
     padding-right: 15px;
     padding-left: 15px;
   }
 }
 
+.text {
+  font-size: 12px;
+  color: #000000;
+}
+
 .heading {
-  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
+  font-family: "YakuHanJP", "LINE Seed JP", "Noto Sans JP";
   font-weight: bolder;
 }
 
@@ -195,6 +311,6 @@ inner {
 }
 
 body {
-  font-family: "'YakuHanJP','LINE Seed JP', Noto Sans";
+  font-family: "YakuHanJP", "LINE Seed JP", "Noto Sans JP";
 }
 /*# sourceMappingURL=style.css.map */
