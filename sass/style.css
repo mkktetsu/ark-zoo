@@ -197,6 +197,13 @@ select::-ms-expand {
 .header__sns-link {
   margin-right: auto;
 }
+@media screen and (max-width: 768px) {
+  .header__sns-link {
+    position: absolute;
+    bottom: 130px;
+    left: 10%;
+  }
+}
 
 .header__sns-link--line {
   position: absolute;
@@ -220,7 +227,7 @@ select::-ms-expand {
   aspect-ratio: 56/50;
   width: 100%;
   position: relative;
-  background-image: url(/images/2x/fv-bg.png);
+  background-image: url("../images/2x/fv-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -230,6 +237,11 @@ select::-ms-expand {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+@media screen and (max-width: 375px) {
+  .fv {
+    background-image: url("../images/2x/fv-sp.jpg");
+  }
 }
 
 .fv__content {
@@ -250,6 +262,11 @@ select::-ms-expand {
 .about {
   margin-top: -385px;
 }
+@media screen and (max-width: 375px) {
+  .about {
+    margin-top: 0;
+  }
+}
 
 .about-text {
   padding-top: 20px;
@@ -263,7 +280,7 @@ select::-ms-expand {
 
 .about-text--name {
   font-size: 14px;
-  letter-spacing: 0, 5em;
+  letter-spacing: 0.05em;
   margin-top: 20px;
   text-align: center;
 }
@@ -279,20 +296,23 @@ select::-ms-expand {
 .service__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  row-gap: 85px;
   margin-top: 40px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 768px) {
   .service__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 40px;
     padding-top: 0;
   }
 }
 @media screen and (max-width: 375px) {
   .service__grid {
     grid-template-columns: repeat(1, 1fr);
-    gap: 23px;
+    row-gap: 30px;
   }
 }
 
@@ -301,13 +321,14 @@ select::-ms-expand {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border-left: 1px solid black;
 }
 .service__card img {
-  width: 240px;
-  height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
+  padding-top: 15px;
+  width: 95%;
 }
 .service__card .service__title {
   font-size: 18px;
@@ -317,6 +338,8 @@ select::-ms-expand {
 .service__card--body {
   width: 100%;
   max-width: 290px;
+  margin-top: -20px;
+  letter-spacing: 2px;
 }
 .service__card .service__text {
   font-size: 14px;
@@ -325,9 +348,15 @@ select::-ms-expand {
   text-align: left;
 }
 
+.service__card:first-child {
+  border-left: none;
+}
+
+.service__card:nth-child(3n) {
+  border-right: 1px solid black;
+}
+
 .service__card--title img {
-  width: 360px;
-  height: auto;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -341,7 +370,7 @@ select::-ms-expand {
 
 .inner {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1250px;
   width: 100%;
   padding-right: 25px;
   padding-left: 25px;
@@ -384,6 +413,15 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .md-show {
+    display: block;
+  }
+}
+
+.sp-show {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .sp-show {
     display: block;
   }
 }

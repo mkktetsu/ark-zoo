@@ -56,6 +56,11 @@
 }
 .header__sns-link {
   margin-right: auto;
+  @include mq("md") {
+    position: absolute;
+    bottom: 130px;
+    left: 10%;
+  }
 }
 .header__sns-link--line {
   position: absolute;
@@ -78,7 +83,7 @@
   aspect-ratio: 56 / 50; //
   width: 100%;
   position: relative;
-  background-image: url(/images/2x/fv-bg.png);
+  background-image: url('../images/2x/fv-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -88,6 +93,9 @@
   flex-direction: column;
   justify-content: flex-end; // ← 下寄せ
   align-items: center; // ← 横中央
+  @include mq("sp") {
+    background-image: url('../images/2x/fv-sp.jpg');
+  }
 }
 .fv__content {
   max-width: 1000px; // 必要であれば中央幅制限
@@ -105,6 +113,9 @@
 //アバウト
 .about {
   margin-top: -385px;
+  @include mq("sp") {
+    margin-top: 0;
+  }
 }
 .about-text {
   padding-top: 20px;
@@ -117,7 +128,7 @@
 }
 .about-text--name {
   font-size: 14px;
-  letter-spacing: 0,05em;
+  letter-spacing: 0.05em;
   margin-top: 20px;
   text-align: center;
 
@@ -133,16 +144,18 @@
 .service__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 40px;
+  row-gap: 85px;
   margin-top: 40px;
+  padding-top: 20px;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
-    gap: 60px;
+    column-gap: 30px;
+    row-gap: 40px;
     padding-top: 0;
     }
 @include mq("sp") {
     grid-template-columns: repeat(1,1fr);
-    gap: 23px;
+    row-gap: 30px;
     }
   
 }
@@ -153,12 +166,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border-left: 1px solid black;
 
   img {
-    width: 240px;
-    height: 240px;
     object-fit: cover;
     margin: 0 auto;
+    padding-top: 15px;
+    width: 95%;
   }
 
   .service__title {
@@ -170,6 +184,8 @@
   &--body {
     width: 100%;
     max-width: 290px;
+    margin-top: -20px;
+    letter-spacing: 2px;
   }
 
   .service__text {
@@ -179,11 +195,16 @@
     text-align: left;
   }
 }
-
-// ★ 1番目のカードだけ画像を大きく表示するスタイル
+// 1番目のカードだけ左ボーダーを消す
+.service__card:first-child {
+  border-left: none;
+}
+// 3, 6, 9... 番目のカードに右ボーダーを追加
+.service__card:nth-child(3n) {
+  border-right: 1px solid black;
+}
+//  1番目のカードだけ画像を大きく表示するスタイル
 .service__card--title img {
-  width: 360px;
-  height: auto;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -206,7 +227,7 @@
 //共通パーツ
 .inner {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1250px;
   width: 100%;
   padding-right: 25px;
   padding-left: 25px;
@@ -248,7 +269,12 @@
     display: block;
   }
 }
-
+.sp-show {
+  display: none;
+  @include mq("sp") {
+    display: block;
+  }
+}
 
 
   body {
