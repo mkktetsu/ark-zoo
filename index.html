@@ -22,12 +22,13 @@
   <link rel="icon" href="#">
 
   <!--  Fonts -->
-<!-- HTML：CDNリンクを貼り付け -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+  <!-- HTML：CDNリンクを貼り付け -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
+  <link href="https://cdn.line-scdn.net/seed/font.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
   <!-- css -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -41,7 +42,7 @@
     <div class="header__inner">
       <div class="header__name">
         <a href="#">
-          <h1 class="fv__heading"><img class="header__logo" src="images/2x/title-top.png" alt="ARK-ZOO"></h1>
+          <h1 class="fv__heading"><img class="header__logo" src="images/title-top.svg" alt="ARK-ZOO"></h1>
         </a>
       </div>
       <div class="header__text">
@@ -49,7 +50,7 @@
       </div>
       <div class="header__sns">
         <div class="header__sns-link">
-          <a class="header__sns-link--line" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer" loading="lazy">
+          <a class="header__sns-link--line" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
             <img src="images/2x/sns-line.png" alt="LINEで友だち追加">
           </a>
         </div>
@@ -98,94 +99,242 @@
       <div class="inner">
         <!-- グリッド一覧 -->
         <div class="service__grid">
-          <div class="service__card service__card--title">
-            <div class="service__card--img">
+          <div class="card-item card-item-title">
+            <div class="card-item-img">
               <img src="images/2x/service01.jpg" alt="サービスタイトル、招き猫の上に毎日の暮らしをサポートと、書いてある">
             </div>
           </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service02.jpg" alt="遺言・相続">
+          
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_93223565_M.jpg" alt="遺言・相続">
             </div>
-            <div class="service__card--body">
-              <p class="service__text">遺言書の提案・作成の支援、遺産相続においては遺産分割協議書等の作成、相続財産の調査、相続人の確定調査など。</p>
-            </div>
-          </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service03.jpg" alt="成年後見">
-            </div>
-            <div class="service__card--body">
-              <p class="service__text">認知症などにより判断能力が不十分な人を本人の自己決定権を尊重しつつ法律的に保護し支援するなどの成年後見人。</p>
+            <div class="card-item-title">遺言・相続</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                遺言書の提案・作成の支援、遺産相続においては遺産分割協議書等の作成、相続財産の調査、相続人の確定調査など。</p>
             </div>
           </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service04.jpg" alt="自動車登録関連">
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_91988898_M01.jpg" alt="成年後見">
             </div>
-            <div class="service__card--body">
-              <p class="service__text">自動車登録申請、自動車重量税申告、交通事故示談書、自賠責保険・任意保険金（後遺障害、損害賠償金）の請求。</p>
-            </div>
-          </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service05.jpg" alt="契約書">
-            </div>
-            <div class="service__card--body">
-              <p class="service__text">交渉事故に関する手続、土地、建物等の賃貸借や金銭の消費賃借等の契約書類の作成など。</p>
+            <div class="card-item-title">成年後見</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                認知症などにより判断能力が不十分な人を本人の自己決定権を尊重しつつ法律的に保護し支援するなどの成年後見人。</p>
             </div>
           </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service06.jpg" alt="土地活用">
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_80657702_M01.jpg" alt="自動車登録関連">
             </div>
-            <div class="service__card--body">
-              <p class="service__text">自分の畑に家を建てたい、畑を駐車場にしたい、農地を売りたいなどの、土地に関する各種申請手続。</p>
-            </div>
-          </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service07.jpg" alt="内容証明">
-            </div>
-            <div class="service__card--body">
-              <p class="service__text">債権債務問題に関する諸手続、内容証明郵便、公正証書等の書類の作成など。</p>
+            <div class="card-item-title">自動車登録関連</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                自動車登録申請、自動車重量税申告、交通事故示談書、自賠責保険・任意保険金（後遺障害、損害賠償金）の請求。</p>
             </div>
           </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service08.jpg" alt="日本国籍取得など国際関連">
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_98015483_M.jpg" alt="契約書">
             </div>
-            <div class="service__card--body">
-              <p class="service__text">日本の国籍取得を希望する人の帰化申請の手続や、外国人登録、在留資格の取得、永住許可、国際結婚。</p>
+            <div class="card-item-title">契約書</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                交通事故に関する手続、土地、建物等の賃貸借や金銭の消費賃借等の契約書類の作成など。</p>
             </div>
           </div>
-          <div class="service__card">
-            <div class="service__card--img">
-              <img src="images/2x/service09.jpg" alt="市民法務">
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_91408136_M.jpg" alt="土地活用">
             </div>
-            <div class="service__card--body">
-              <p class="service__text">内容証明書の作成、クーリングオフ、各種契約書、示談書、協議書、悪徳商法などの相談にも対応。</p>
+            <div class="card-item-title">土地活用</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                自分の畑に家を建てたい、畑を駐車場にしたい、農地を売りたいなどの、土地に関する各種申請手続。</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_29878970_M.jpg" alt="内容証明">
+            </div>
+            <div class="card-item-title">内容証明</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                債権債務問題に関する諸手続、内容証明郵便、公正証書等の書類の作成など。</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_53613769_M.jpg" alt="日本国籍取得など国際関連">
+            </div>
+            <div class="card-item-title">日本国籍取得<br>など国際関連</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                日本の国籍取得を希望する人の帰化申請の手続や、外国人登録、在留資格の取得、永住許可、国際結婚。</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_99993793_M.jpg" alt="市民法務">
+            </div>
+            <div class="card-item-title">市民法務</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                内容証明書の作成、クーリングオフ、各種契約書、示談書、協議書、悪徳商法などの相談にも対応。</p>
             </div>
           </div>
           <!-- ...カードは追加出来ます -->
         </div>
       </div>
-    </section><!------//サービス------------------//サービス----------------------//サービス-->
-
+    </section>
+  <!---ビジネス-----------ビジネス--------------ビジネス--------------ビジネス--------------ビジネス------->
     <section class="business">
       <div class="inner">
-        <h2 class="service__section-title">business</h2>
-        <p class="menu-text"></p>
+        <div class="business__grid">
+          <div class="card-item card-item-title">
+            <div class="card-item-img">
+              <img src="images/2x/business01.svg" alt="ビジネスタイトル、招き猫の上に毎日の暮らしをサポートと、書いてある">
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_98035568_M.jpg" alt="法人関連手続">
+            </div>
+            <div class="card-item-title">法人関連手続</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                株式会社やNPO法人、医療法人、学校法人、宗教法人、組合等、法人の設立手続とその代理及び事業運営の支援(定款・議事録の作成、公的融資手続）など。
+              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/copy.jpg" alt="知的財産権の保護">
+            </div>
+            <div class="card-item-title">知的財産権の保護</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                著作権登録、プログラム登録、著作権契約。
+                著作権の文化庁への登録申請は行政書士の専管業務。知的財産権の保護・啓蒙活動など。              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_99601136_M.jpg" alt="外国人雇用関係">
+            </div>
+            <div class="card-item-title">外国人雇用関係</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                外国人を雇用する際に必要となる入国管理局への申請手続など。              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_74141645_M.jpg" alt="中小企業支援">
+            </div>
+            <div class="card-item-title">中小企業支援</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                中小企業の経営を支援する外部専門家として、知的資産経営導入と知的資産経営報告書の作成・サポートなど。              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_95548545_M.jpg" alt="運輸関連">
+            </div>
+            <div class="card-item-title">運輸関連</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                一般貨物自動車運送事業、特定貨物自動車運送事業許可申請、タクシー営業許可申請など。              </p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img card-item-img--circle">
+              <img src="images/pixta_93200571_M.jpg" alt="法人関連手続">
+            </div>
+            <div class="card-item-title">電子申請・電子調達</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                電子署名を要求される申請・届出、また電子申請手続の代理など。</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-img">
+              <img src="images/pixta_87319305_M_01.jpg" alt="許認可申請">
+            </div>
+            <div class="card-item-title">許認可申請</div>
+            <div class="card-item-body">
+              <p class="card-item-text">
+                建設業許可申請、入札資格申請、宅建業免許申請、風俗営業許可申請・営業開始届、飲食店営業許可申請、
+                古物商・質屋等営業許可申請、深夜酒類提供飲食店営業開始届、旅行業登録申請、産業廃棄物処理業許可申請、農地法関連許可申請・届出</p>
+            </div>
+          </div>
+          <!-- ...カードは追加出来ます -->
+        </div>
       </div>
     </section>
-    <section class="office">
 
+    <section class="access">
+      <div class="acccess__office office">
+        <h2 class="ofiice-name">OFFICE</h2>
+        <div class="ofiice-address">
+          〒370―0823 群馬県高崎市中紺屋町37<br>HUSiz TAKASAKI 3F
+        </div>
+      </div>
+      <div class="access__inner">
+        <div class="access__map">
+          <iframe width="600" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51412.92580111355!2d138.95217472826897!3d36.35332115588666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8d0032845bfb%3A0xb93fbe91ec023a22!2sHUBiz%20TAKASAKI!5e0!3m2!1sja!2sjp!4v1744525182982!5m2!1sja!2sjp"></iframe>
+        </div>
+      </div>
     </section>
   </main>
-
   <footer class="footer inner">
-    <h4 class="footer__title">事務所名</h4>
-    <p class="footer__title-name"></p>
+    <div class="footer__logo">
+      <div class="footer__logo--img">
+        <img src="images/footer-logo.svg" alt="フッターロゴ">
+      </div>
+      <p class="text footer__logo--text">安心と笑顔を届ける、行政手続きの頼れるパートナー</p>
+    </div>
+    <div class="footer__sns-link">
+      <a class="footer__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
+        <img src="images/2x/sns-line-sp.svg" alt="LINEで友だち追加">
+      </a>
+    </div>
+    <div class="footer__contacts">
+      <div class="footer__contact">
+        <h4 class="footer__contact-item--title text">事務所名</h4>
+        <p class="footer__contact-item--text text">行政書士事務所ARK ZOO</p>  
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__contact-item--title text">代表者</h4>
+        <p class="footer__contact-item--text text">中田裕也</p>  
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__contact-item--title text">連絡先</h4>
+        <p class="footer__contact-item--text text">080-7000-0077</p>  
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__contact-item--title text">所在地</h4>
+        <p class="footer__contact-item--text text">〒370-0823 群馬県高崎市中紺屋町37<br>HUBiz TAKASAKI 3F</p>  
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__contact-item--title text">登録番号</h4>
+        <p class="footer__contact-item--text text">行政書士（第25141122号）</p>  
+      </div>
+    </div>
+    <div class="footer__sns-img">
+      <div class="footer__sns-link">
+        <a class="footer__sns-link--black" href="#">
+          <img src="images/sns-x-black.svg"alt="X（旧Twitter）のリンク" loading="lazy">
+        </a>
+      </div>
+    </div>
+    <div class="footer-cat">
+      <img src="images/A-20.png" alt="芝生の上に寝転ぶ猫">
+    </div>
+
   </footer>
 
 </body>

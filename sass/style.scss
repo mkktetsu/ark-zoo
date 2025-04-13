@@ -126,7 +126,9 @@
       display: block;
       width: 180px; // ← 必要ならサイズ調整
       margin: 0 auto;
-
+      @include mq("sp") {
+        padding-top: 120px;
+      }
       img {
         width: 100%;
         height: auto;
@@ -155,7 +157,7 @@
 .about {
   margin-top: -385px;
   @include mq("sp") {
-    margin-top: 0;
+    margin-top: 120px;
   }
 }
 .about-text {
@@ -191,6 +193,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   row-gap: 85px;
+  align-items: start;
   margin-top: 40px;
   padding-top: 20px;
   @include mq("md") {
@@ -199,7 +202,7 @@
     row-gap: 40px;
     padding-top: 0;
     }
-@include mq("sp") {
+  @include mq("sp") {
     grid-template-columns: repeat(1,1fr);
     row-gap: 30px;
     }
@@ -207,67 +210,275 @@
 }
 
 
-.service__card {
+.card-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border-left: 1px solid black;
+  @include mq("md") {
+  border-left: none;
+  }
+}
 
-  img {
+.card-item-img {
     object-fit: cover;
     margin: 0 auto;
-    padding-top: 15px;
     width: 95%;
   }
 
-  .service__title {
+.card-item-title {
     font-size: 18px;
     font-weight: bold;
     margin-top: 15px;
-  }
+}
 
-  &--body {
+.card-item-body {
     width: 100%;
     max-width: 290px;
     margin-top: -20px;
     letter-spacing: 2px;
-  }
+}
 
-  .service__text {
+  .card-item-text {
     font-size: 14px;
-    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 40px;
     line-height: 1.6;
     text-align: left;
   }
-}
+
 // 1番目のカードだけ左ボーダーを消す
-.service__card:first-child {
+.card-item:first-child {
   border-left: none;
 }
 // 3, 6, 9... 番目のカードに右ボーダーを追加
-.service__card:nth-child(3n) {
+.card-item:nth-child(3n) {
   border-right: 1px solid black;
+  @include mq("md") {
+    border-right: none;
+    }
+
 }
 //  1番目のカードだけ画像を大きく表示するスタイル
-.service__card--title img {
+.card-item-title img {
   max-width: 100%;
   margin: 0 auto;
 }
+//   .card-item-text {
+//     font-size: 14px;
+//     margin-top: 10px;
+//     line-height: 1.6;
+//     text-align: left;
+//   }
+// //ビジネス
+.business {
+  background-image: url(../images/aaaaa001.png);
+    aspect-ratio: 56 / 50; 
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: top; 
+    align-items: center; 
+    @include mq("sp") {
+      background-image: url('../images/2x/fv-sp.jpg');
+      background-size: 100% auto;
+      background-position: bottom center;
+      padding-bottom: 160px; // 背景の高さに合わせて調整
+    }
+  
+}
+.business__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 85px;
+  align-items: start;
+  margin-top: 40px;
+  padding-top: 315px;
+  @include mq("md") {
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    padding-top: 0;
+    }
+  @include mq("sp") {
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 30px;
+    }
+  
+}
 
 
+//カード
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  border-left: 1px solid black;
 
-  .service__text {
-    font-size: 14px;
-    margin-top: 10px;
-    line-height: 1.6;
-    text-align: left;
+  @include mq("sp") {
+    border-left: none;
   }
+}
+
+.card-item-img--circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+ // margin-bottom: 10px;
+ border: 10px solid #fff; // 白い枠
+ margin: 0 auto; // 中央に配置
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
 
+.card-item-title {
+  margin-top: -20px;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.14em;
+  color: #000;
+  text-shadow:
+    -1px -3px 0 #fff,
+     1px -3px 0 #fff,
+    -1px  3px 0 #fff,
+     1px  3px 0 #fff;
 
+}
 
+.card-item-body {
+  max-width: 290px;
+}
 
+// .card-item-text {
+//   font-size: 14px;
+//   font-weight: bold;
+//   line-height: 1.75;
+//   padding: 30px 50px auto;
+//}
+
+//↑
+//アクセス-------------------------アクセス----------------
+.ofiice-name {
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.3;
+}
+.ofiice-address {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.1166;
+}
+.access__inner {
+  margin: 0 auto;
+  max-width: 1250px;
+  width: 100%;
+  padding-top: 35px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.access__map {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; // 16:9の比率
+  position: relative;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+  }
+}
+.acccess__office {
+  margin: 130px auto 0;
+  text-align: center;
+}
+.office-address {
+  padding-top: 35px;
+  line-height: 1.5;
+}
+//フッター
+.footer {
+  position: relative;
+  padding-top: 40px;
+  background-image: url('../images/footer-img.svg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 167px; // ← 高さを167pxに指定
+}
+.footer__logo {
+
+}
+.footer__logo--text {
+  font-weight: bold;
+  padding-top: 50px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;    // 上から下へ並べる
+}
+.footer__sns-link {
+  display: block;
+  padding-top: 50px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; // ← テキストも中央に
+  padding-top: 50px;
+}
+.footer__contact {
+  padding-top: 40px;
+}
+.footer__contact-item--title {
+  font-weight: bold;
+  background-color: $gray;
+  padding: 5px 25px;
+  border-radius:20px;
+  display: inline-block;
+}
+.footer__contact-item--text {
+  font-weight: bold;
+  padding-top: 10px;
+}
+.footer__sns-link--black {
+  display: inline-block;
+  width: 90px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.footer-cat {
+  position: absolute;
+  bottom: 60px;
+  max-width: 100%;
+  width: 210px;
+  height: auto;
+}
 
 
 //共通パーツ
