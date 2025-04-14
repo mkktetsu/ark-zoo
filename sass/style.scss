@@ -44,10 +44,10 @@
 }
 .header__text-message {
   position: absolute;
-  top: 80px;
+  top: 73px;
   left: 30%;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
 }
 .header__sns {
   gap: 10px;
@@ -91,7 +91,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
-  min-height: 100vh;
+  //min-height: 100vh;
   padding-top: 260px; 
   display: flex;
   flex-direction: column;
@@ -156,6 +156,10 @@
 //アバウト
 .about {
   margin-top: -385px;
+  @include mq("md") {
+    margin-top: 120px;
+  }
+
   @include mq("sp") {
     margin-top: 120px;
   }
@@ -174,17 +178,18 @@
   letter-spacing: 0.05em;
   margin-top: 20px;
   text-align: center;
+  font-weight: bold;
 
 }
-.about-name {
-  display: block;
-  text-align: center;
-  padding-top: 0.5em;
-}
+// .about-name {
+//   display: block;
+//   text-align: center;
+//   padding-top: 0.5em;
+// }
 
 //サービス
 .service {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .service__section-title {
   font-size: 12px;
@@ -192,10 +197,10 @@
 .service__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  row-gap: 85px;
+  row-gap: 25px;
   align-items: start;
   margin-top: 40px;
-  padding-top: 20px;
+ // padding-top: 20px;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
     column-gap: 30px;
@@ -215,56 +220,68 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-left: 1px solid black;
+ // border-left: 1px solid black;
   @include mq("md") {
   border-left: none;
   }
 }
-
+.card-item--large {
+  grid-column: span 2;
+  aspect-ratio: 2000/1334;
+}
 .card-item-img {
     object-fit: cover;
     margin: 0 auto;
     width: 95%;
   }
-
+.card-item-img--business {
+    width: 110%;
+    margin-top: -170px;
+    margin-left: -55px;
+}
 .card-item-title {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: -30px;
+    transform: scale(1.1);
+    margin-bottom: 40px; 
+}
+.card-item-title--small {
+  font-size: 24px;
 }
 
 .card-item-body {
     width: 100%;
     max-width: 290px;
-    margin-top: -20px;
+    margin-top: -30px;
     letter-spacing: 2px;
 }
 
   .card-item-text {
     font-size: 14px;
     font-weight: bold;
-    margin-top: 40px;
     line-height: 1.6;
     text-align: left;
+    padding-top: 20px;
   }
 
 // 1番目のカードだけ左ボーダーを消す
-.card-item:first-child {
-  border-left: none;
-}
+// .card-item:first-child {
+//   border-left: none;
+// }
 // 3, 6, 9... 番目のカードに右ボーダーを追加
-.card-item:nth-child(3n) {
-  border-right: 1px solid black;
-  @include mq("md") {
-    border-right: none;
-    }
+// .card-item:nth-child(3n) {
+//   border-right: 1px solid black;
+//   @include mq("md") {
+//     border-right: none;
+//     }
 
-}
-//  1番目のカードだけ画像を大きく表示するスタイル
-.card-item-title img {
-  max-width: 100%;
-  margin: 0 auto;
-}
+// }
+// //  1番目のカードだけ画像を大きく表示するスタイル
+// .card-item-title img {
+//   max-width: 100%;
+//   margin: 0 auto;
+// }
 //   .card-item-text {
 //     font-size: 14px;
 //     margin-top: 10px;
@@ -295,7 +312,7 @@
 .business__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  row-gap: 85px;
+  row-gap: 40px;
   align-items: start;
   margin-top: 40px;
   padding-top: 315px;
@@ -320,7 +337,7 @@
   align-items: center;
   text-align: center;
   padding: 20px 10px;
-  border-left: 1px solid black;
+//  border-left: 1px solid black;
 
   @include mq("sp") {
     border-left: none;
@@ -328,8 +345,8 @@
 }
 
 .card-item-img--circle {
-  width: 220px;
-  height: 220px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   overflow: hidden;
  // margin-bottom: 10px;
@@ -344,8 +361,10 @@
 }
 
 
-.card-item-title {
-  margin-top: -20px;
+.card-item-top {
+  margin-top: 9px;
+  margin-right: 14px;
+  margin-left: -35px;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 0.14em;
@@ -355,11 +374,27 @@
      1px -3px 0 #fff,
     -1px  3px 0 #fff,
      1px  3px 0 #fff;
+}
+.card-item-top--business {
 
 }
 
+.card-item-title {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.14em;
+  color: #000;
+  text-shadow:
+    -1px -3px 0 #fff,
+     1px -3px 0 #fff,
+    -1px  3px 0 #fff,
+     1px  3px 0 #fff;
+}
 .card-item-body {
   max-width: 290px;
+}
+.card-item-body--large {
+  max-width: 660px;
 }
 
 // .card-item-text {
@@ -373,26 +408,49 @@
 //アクセス-------------------------アクセス----------------
 .ofiice-name {
   font-weight: bold;
-  font-size: 36px;
-  letter-spacing: 0.3;
+  font-size: 40px;
+  letter-spacing: 5.5px;
 }
 .ofiice-address {
   font-weight: bold;
   font-size: 14px;
-  letter-spacing: 0.1166;
+  padding-top: 1rem;
+  letter-spacing: 0.15em;
 }
+
 .access__inner {
   margin: 0 auto;
-  max-width: 1250px;
-  width: 100%;
+ // max-width: 1250px;
+  max-width: 100%;
   padding-top: 35px;
   padding-right: 0;
   padding-left: 0;
 }
+.access__cat-foot img{
+  max-width: 100%;
+  width: 150px;
+  margin-left: auto;
+}
+.access__cat-foot--fast{
+  margin-top: -15px;
+  margin-right: 30px;
+}
+.access__cat-foot--second {
+  margin-top: 16px;
+  margin-right: 130px;
+}
+.move-cat {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: -300px;
+  right: 0;
+}
+
 .access__map {
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; // 16:9の比率
+  padding-bottom: 43%; 
   position: relative;
 
   iframe {
@@ -404,9 +462,10 @@
     border: none;
   }
 }
-.acccess__office {
-  margin: 130px auto 0;
+.access__office {
+  margin: -195px auto 0;
   text-align: center;
+  z-index: 1000;
 }
 .office-address {
   padding-top: 35px;
@@ -415,19 +474,19 @@
 //フッター
 .footer {
   position: relative;
-  padding-top: 40px;
+  padding-top: 130px;
   background-image: url('../images/footer-img.svg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 167px; // ← 高さを167pxに指定
+  background-size: 100% auto; // ← 高さを167pxに指定
 }
 .footer__logo {
 
 }
 .footer__logo--text {
   font-weight: bold;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 .footer {
   display: flex;
@@ -437,18 +496,20 @@
 }
 .footer__sns-link {
   display: block;
-  padding-top: 50px;
+  padding-top: 40px;
+  width: 100%;
+  max-width: 360px;
 }
 .footer__contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center; // ← テキストも中央に
-  padding-top: 50px;
 }
-.footer__contact {
+.footer__contact{
   padding-top: 40px;
 }
+
 .footer__contact-item--title {
   font-weight: bold;
   background-color: $gray;
@@ -458,7 +519,7 @@
 }
 .footer__contact-item--text {
   font-weight: bold;
-  padding-top: 10px;
+ // padding-top: 10px;
 }
 .footer__sns-link--black {
   display: inline-block;
@@ -474,9 +535,9 @@
 }
 .footer-cat {
   position: absolute;
-  bottom: 60px;
+  bottom: 90px;
   max-width: 100%;
-  width: 210px;
+  width: 250px;
   height: auto;
 }
 
@@ -500,7 +561,7 @@
 }
 .heading {
   font-family: $base-font;
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .menu-title {
