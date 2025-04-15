@@ -31,20 +31,20 @@
 .header__name {
   width: 556px;
   height: auto;
-  flex-shrink: 0; // ロゴを縮めない
-  @include mq("lg") {
-      width: 132px;
-      height: 22px;
-      margin-left: 0;
+ // flex-shrink: 0; // ロゴを縮めない
   }
-}
+
 .header__logo {
   width: 556px;
   height: auto;
+  @include mq("md") {
+    width: 370px;
+  }
+
 }
 .header__text-message {
   position: absolute;
-  top: 73px;
+  top: 25%;
   left: 30%;
   font-weight: bold;
   letter-spacing: 2.5px;
@@ -55,15 +55,11 @@
   right: 20px;
 }
 .header__sns-link {
-  margin-right: auto;
+max-width: 240px;
+margin: 0 auto;
+
   @include mq("md") {
-    position: absolute;
-    bottom: 130px;
-    left: 10%;
-  }
-  @include mq("md") {
-    position: absolute;
-    bottom: -30px;
+    max-width: 85%;
   }
 }
 .header__sns-link--line {
@@ -72,6 +68,7 @@
   right: 37px;
   display: inline-block;
   width: 420px;
+  max-width: 30%;
   height: auto;
 }
 .header__sns-link--x {
@@ -81,6 +78,10 @@
   display: inline-block;
   width: 90px;
   height: auto;
+  @include mq("sp") {
+      position: static;
+      margin: 0 auto;
+    }
 }
 //ファーストビュー
 .fv {
@@ -97,8 +98,12 @@
   flex-direction: column;
   justify-content: flex-end; // ← 下寄せ
   align-items: center; // ← 横中央
+  @include mq("md") {
+    min-height: 600px; // ← SNSのブロック分、余裕を持たせる
+  }
   @include mq("sp") {
     background-image: url('../images/2x/fv-sp.jpg');
+    min-height: 700px;
   }
 }
 .fv__content {
@@ -108,6 +113,7 @@
   margin-right: auto;
   text-align: center; // 中のテキストを中央揃え
 }
+
 .sns-sp-wrapper {
   @include mq("sp") {
     display: flex;
@@ -138,10 +144,10 @@
     }
   }
 }
-.header__sns-img {
+.header__background {
   background-image: url('../images/haikei001.png');
   width: 100%;
-  height: 100px;
+  height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -155,7 +161,7 @@
 }
 //アバウト
 .about {
-  margin-top: -385px;
+ // margin-top: -385px;
   @include mq("md") {
     margin-top: 120px;
   }
@@ -228,6 +234,14 @@
 .card-item--large {
   grid-column: span 2;
   aspect-ratio: 2000/1334;
+  @include mq("md") {
+    grid-column: span 2;
+    aspect-ratio: 3 / 2;
+  }
+  @include mq("sp") {
+    grid-column: span 1;
+    aspect-ratio: auto; 
+  }
 }
 .card-item-img {
     object-fit: cover;
@@ -236,8 +250,19 @@
   }
 .card-item-img--business {
     width: 110%;
-    margin-top: -170px;
-    margin-left: -55px;
+    position: relative;
+    top: -130px;
+    left: -70px;
+    padding-left: 30px;
+    @include mq("xl") {
+      left: -35px;
+    }
+    @include mq("md") {
+      top: 75px;
+    }
+    //transform: translateY(-130px);
+  //  margin-top: -170px;
+  //  margin-left: -55px;
 }
 .card-item-title {
     font-size: 18px;
@@ -302,7 +327,7 @@
     justify-content: top; 
     align-items: center; 
     @include mq("sp") {
-      background-image: url('../images/2x/fv-sp.jpg');
+      //background-image: url('../images/2x/fv-sp.jpg');
       background-size: 100% auto;
       background-position: bottom center;
       padding-bottom: 160px; // 背景の高さに合わせて調整
@@ -326,7 +351,6 @@
     grid-template-columns: repeat(1,1fr);
     row-gap: 30px;
     }
-  
 }
 
 
@@ -352,6 +376,11 @@
  // margin-bottom: 10px;
  border: 10px solid #fff; // 白い枠
  margin: 0 auto; // 中央に配置
+ @include mq("md") {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1 / 1; // 正円を保つ
+}
 
   img {
     width: 100%;
@@ -362,8 +391,8 @@
 
 
 .card-item-top {
-  margin-top: 9px;
-  margin-right: 14px;
+ // margin-top: 9px;
+ // margin-right: 14px;
   margin-left: -35px;
   font-weight: bold;
   font-size: 30px;
@@ -539,6 +568,10 @@
   max-width: 100%;
   width: 250px;
   height: auto;
+  @include mq("lg") {
+    width: 250px;
+    bottom: 30px;
+  }
 }
 
 
@@ -584,6 +617,9 @@
 .md-show {
   display: none;
   @include mq("md") {
+    display: block;
+  }
+  @include mq("sp") {
     display: block;
   }
 }
