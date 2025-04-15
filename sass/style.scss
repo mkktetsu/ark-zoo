@@ -121,6 +121,7 @@ margin: 0 auto;
     justify-content: center;
     align-items: center;
     gap: 20px; // ← 間隔をつける
+<<<<<<< HEAD
 
     .header__sns-link {
       position: static; // ← 重なり防止のため
@@ -144,6 +145,31 @@ margin: 0 auto;
     }
   }
 }
+=======
+  }
+.header__sns-link {
+  position: static; // ← 重なり防止のため
+//      width: auto;
+  text-align: center;
+}
+
+.header__sns-link a {
+    display: block;
+    width: 180px; 
+    margin: 0 auto;
+    @include mq("sp") {
+      padding-top: 120px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    //  margin: 0 auto;
+    }
+  }
+}
+
+>>>>>>> a8ae5c0 (0415last)
 .header__background {
   background-image: url('../images/haikei001.png');
   width: 100%;
@@ -152,6 +178,16 @@ margin: 0 auto;
   background-size: cover;
   background-position: center;
   background-color: $black;
+<<<<<<< HEAD
+=======
+  @include mq("sp") {
+    margin-top: 20px; // ← 上との間に余白
+    padding-top: 40px; // ← 中のXアイコンに余裕を
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+>>>>>>> a8ae5c0 (0415last)
 }
 .about__heading {
   font-size: 40px;
@@ -163,7 +199,11 @@ margin: 0 auto;
 .about {
  // margin-top: -385px;
   @include mq("md") {
+<<<<<<< HEAD
     margin-top: 120px;
+=======
+    margin-top: 0;
+>>>>>>> a8ae5c0 (0415last)
   }
 
   @include mq("sp") {
@@ -504,7 +544,11 @@ margin: 0 auto;
 .footer {
   position: relative;
   padding-top: 130px;
+<<<<<<< HEAD
   background-image: url('../images/footer-img.svg');
+=======
+  background-image: url('../images/footer-bg.webp');
+>>>>>>> a8ae5c0 (0415last)
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -562,6 +606,7 @@ margin: 0 auto;
     display: block;
   }
 }
+<<<<<<< HEAD
 .footer-cat {
   position: absolute;
   bottom: 90px;
@@ -573,6 +618,9 @@ margin: 0 auto;
     bottom: 30px;
   }
 }
+=======
+
+>>>>>>> a8ae5c0 (0415last)
 
 
 //共通パーツ
@@ -623,6 +671,16 @@ margin: 0 auto;
     display: block;
   }
 }
+<<<<<<< HEAD
+=======
+.sp-none {
+  display: block;
+  @include mq("sp") {
+    display: none;
+  }
+
+}
+>>>>>>> a8ae5c0 (0415last)
 .sp-show {
   display: none;
   @include mq("sp") {
