@@ -230,11 +230,7 @@ select::-ms-expand {
   aspect-ratio: 56/50;
   width: 100%;
   position: relative;
-<<<<<<< HEAD
   background-image: url("../images/2x/fv-bg.png");
-=======
-  background-image: url("../images/");
->>>>>>> a8ae5c0 (0415last)
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -272,7 +268,6 @@ select::-ms-expand {
     align-items: center;
     gap: 20px;
   }
-<<<<<<< HEAD
   .sns-sp-wrapper .header__sns-link {
     position: static;
     text-align: center;
@@ -294,27 +289,27 @@ select::-ms-expand {
     height: auto;
     display: block;
   }
-=======
 }
-.sns-sp-wrapper .header__sns-link {
+
+.header__sns-link {
   position: static;
   text-align: center;
 }
-.sns-sp-wrapper .header__sns-link a {
+
+.header__sns-link a {
   display: block;
   width: 180px;
   margin: 0 auto;
 }
 @media screen and (max-width: 375px) {
-  .sns-sp-wrapper .header__sns-link a {
+  .header__sns-link a {
     padding-top: 120px;
   }
 }
-.sns-sp-wrapper .header__sns-link a img {
+.header__sns-link a img {
   width: 100%;
   height: auto;
   display: block;
->>>>>>> a8ae5c0 (0415last)
 }
 
 .header__background {
@@ -326,8 +321,6 @@ select::-ms-expand {
   background-position: center;
   background-color: #000000;
 }
-<<<<<<< HEAD
-=======
 @media screen and (max-width: 375px) {
   .header__background {
     margin-top: 20px;
@@ -337,7 +330,6 @@ select::-ms-expand {
     z-index: 1;
   }
 }
->>>>>>> a8ae5c0 (0415last)
 
 .about__heading {
   font-size: 40px;
@@ -348,11 +340,8 @@ select::-ms-expand {
 
 @media screen and (max-width: 768px) {
   .about {
-<<<<<<< HEAD
     margin-top: 120px;
-=======
     margin-top: 0;
->>>>>>> a8ae5c0 (0415last)
   }
 }
 @media screen and (max-width: 375px) {
@@ -633,8 +622,9 @@ select::-ms-expand {
   margin-right: 130px;
 }
 
-.move-cat {
+.access__move-in-cat__img {
   position: absolute;
+  max-width: 100%;
   width: 200px;
   height: auto;
   top: -300px;
@@ -670,11 +660,8 @@ select::-ms-expand {
 .footer {
   position: relative;
   padding-top: 130px;
-<<<<<<< HEAD
   background-image: url("../images/footer-img.svg");
-=======
   background-image: url("../images/footer-bg.webp");
->>>>>>> a8ae5c0 (0415last)
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -736,7 +723,6 @@ select::-ms-expand {
   display: block;
 }
 
-<<<<<<< HEAD
 .footer-cat {
   position: absolute;
   bottom: 90px;
@@ -751,8 +737,6 @@ select::-ms-expand {
   }
 }
 
-=======
->>>>>>> a8ae5c0 (0415last)
 .inner {
   margin: 0 auto;
   max-width: 1250px;
@@ -807,8 +791,6 @@ select::-ms-expand {
   }
 }
 
-<<<<<<< HEAD
-=======
 .sp-none {
   display: block;
 }
@@ -818,7 +800,6 @@ select::-ms-expand {
   }
 }
 
->>>>>>> a8ae5c0 (0415last)
 .sp-show {
   display: none;
 }
