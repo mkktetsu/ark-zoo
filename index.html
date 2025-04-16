@@ -35,6 +35,9 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
   <script src="/js/script.js" defer></script>
+  <!--gsap-->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -327,15 +330,17 @@
       </div>
     </div>
     <section class="access">
-      <div class="access__cat-foot">
-        <img class="access__cat-foot--fast" src="/images/cat-foot.webp" alt="猫の足跡">
-        <img class="access__cat-foot--second" src="/images/cat-foot.webp" alt="猫の足跡">
-      </div>
-      <div class="access__move-in-cat">
-        <picture>
-          <source srcset="images/fade-in-cat.webp" type="image/webp">
-          <img class="access__move-in-cat__img" src="images/fade-in-cat.png" alt="滑り込む猫">
-        </picture>
+      <div class="access__cat-in">
+        <div class="access__cat-foot">
+          <img class="access__cat-foot--fast" src="/images/cat-foot.webp" alt="猫の足跡">
+          <img class="access__cat-foot--second" src="/images/cat-foot.webp" alt="猫の足跡">
+        </div>
+        <div class="move-in-cat">
+          <picture>
+            <source srcset="images/fade-in-cat.webp" type="image/webp">
+            <img class="access__move-in-cat__img" src="images/fade-in-cat.png" alt="滑り込む猫">
+          </picture>
+        </div>  
       </div>
       <div class="access__office office">
         <h2 class="ofiice-name">OFFICE</h2>
@@ -348,7 +353,7 @@
           <iframe width="600" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51412.92580111355!2d138.95217472826897!3d36.35332115588666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8d0032845bfb%3A0xb93fbe91ec023a22!2sHUBiz%20TAKASAKI!5e0!3m2!1sja!2sjp!4v1744525182982!5m2!1sja!2sjp"></iframe>
         </div>
       </div>
-      <div class="access__move-out-cat">
+      <div class="move-out-cat">
         <picture>
           <source srcset="images/fade-auto-cat.webp" type="image/webp">
           <img class="access__move-auto-cat__img" src="images/fade-auto-cat.png" alt="走り去る猫">
