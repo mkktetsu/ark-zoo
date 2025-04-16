@@ -333,11 +333,6 @@ select::-ms-expand {
   position: absolute;
   bottom: 180px;
 }
-@media screen and (max-width: 375px) {
-  .about {
-    display: block;
-  }
-}
 
 .about__heading {
   font-size: 40px;

@@ -188,9 +188,6 @@ margin: 0 auto;
 .about {
   position: absolute;
   bottom: 180px;
-  @include mq("sp") {
-display: block;
-   }
 }
 .about__heading {
   font-size: 40px;
