@@ -29,7 +29,7 @@
 
 }
 .header__name {
-  width: 556px;
+  width: 34.75%;
   height: auto;
  // flex-shrink: 0; // ロゴを縮めない
   }
@@ -46,6 +46,7 @@
   position: absolute;
   top: 25%;
   left: 30%;
+  max-width: 35%;
   font-weight: bold;
   letter-spacing: 2.5px;
 }
@@ -55,7 +56,7 @@
   right: 20px;
 }
 .header__sns-link {
-max-width: 240px;
+//max-width: 240px;
 margin: 0 auto;
 
   @include mq("md") {
@@ -67,8 +68,8 @@ margin: 0 auto;
   top: 35px;
   right: 37px;
   display: inline-block;
-  width: 420px;
-  max-width: 30%;
+  width: 25%;
+  max-width: 100%;
   height: auto;
 }
 .header__sns-link--x {
@@ -88,11 +89,11 @@ margin: 0 auto;
   aspect-ratio: 56 / 50; //
   width: 100%;
   position: relative;
-  background-image: url('../images/2x/fv-bg.png');
+  background-image: url('../images/fv.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
-  //min-height: 100vh;
+  min-height: 100vh;
   padding-top: 260px; 
   display: flex;
   flex-direction: column;
@@ -102,8 +103,8 @@ margin: 0 auto;
     min-height: 600px; // ← SNSのブロック分、余裕を持たせる
   }
   @include mq("sp") {
-    background-image: url('../images/2x/fv-sp.jpg');
-    min-height: 700px;
+    background-image: url('../images/fv-sp.jpg');
+   // min-height: 700px;
   }
 }
 .fv__content {
@@ -146,14 +147,14 @@ margin: 0 auto;
 }
 
 .header__sns-link {
-  position: static; // ← 重なり防止のため
+ // position: static; // ← 重なり防止のため
 //      width: auto;
   text-align: center;
 }
 
 .header__sns-link a {
     display: block;
-    width: 180px; 
+   // width: 180px; 
     margin: 0 auto;
     @include mq("sp") {
       padding-top: 120px;
@@ -168,9 +169,9 @@ margin: 0 auto;
 
 
 .header__background {
-  background-image: url('../images/haikei001.png');
+  background-image: url('../images/fv-sp.svg');
   width: 100%;
-  height: 250px;
+  height: 240px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -184,6 +185,13 @@ margin: 0 auto;
     z-index: 1;
   }
 }
+.about {
+  position: absolute;
+  bottom: 180px;
+  @include mq("sp") {
+display: block;
+   }
+}
 .about__heading {
   font-size: 40px;
   align-items: center;
@@ -191,18 +199,12 @@ margin: 0 auto;
   letter-spacing: 10px;
 }
 //アバウト
-.about {
- // margin-top: -385px;
+.about-content {
   @include mq("md") {
-
-    margin-top: 120px;
-
-    margin-top: 0;
-
+  //  margin-top: 120px;
   }
-
   @include mq("sp") {
-    margin-top: 120px;
+   // margin-top: 700px;
   }
 }
 .about-text {
@@ -230,7 +232,7 @@ margin: 0 auto;
 
 //サービス
 .service {
-  margin-top: 80px;
+ // margin-top: 20px;
 }
 .service__section-title {
   font-size: 12px;
@@ -240,7 +242,7 @@ margin: 0 auto;
   grid-template-columns: repeat(3,1fr);
   row-gap: 25px;
   align-items: start;
-  margin-top: 40px;
+ // margin-top: 40px;
  // padding-top: 20px;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
@@ -256,19 +258,19 @@ margin: 0 auto;
 }
 
 
-.card-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
- // border-left: 1px solid black;
-  @include mq("md") {
-  border-left: none;
-  }
-}
+// .card-item {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-align: center;
+//  // border-left: 1px solid black;
+//   @include mq("md") {
+//   border-left: none;
+//   }
+// }
 .card-item--large {
   grid-column: span 2;
-  aspect-ratio: 2000/1334;
+  aspect-ratio: 3/1;
   @include mq("md") {
     grid-column: span 2;
     aspect-ratio: 3 / 2;
@@ -285,9 +287,10 @@ margin: 0 auto;
   }
 .card-item-img--business {
     width: 110%;
+    max-width: 100%;
     position: relative;
-    top: -130px;
-    left: -70px;
+    top: -170px;
+    left: -40px;
     padding-left: 30px;
     @include mq("xl") {
       left: -35px;
@@ -302,7 +305,7 @@ margin: 0 auto;
 .card-item-title {
     font-size: 18px;
     font-weight: bold;
-    margin-top: -30px;
+    margin-top: -40px;
     transform: scale(1.1);
     margin-bottom: 40px; 
 }
@@ -350,7 +353,7 @@ margin: 0 auto;
 //   }
 // //ビジネス
 .business {
-  background-image: url(../images/aaaaa001.png);
+  background-image: url(../images/business-bg.svg);
     aspect-ratio: 56 / 50; 
     width: 100%;
     position: relative;
@@ -372,14 +375,14 @@ margin: 0 auto;
 .business__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  row-gap: 40px;
+ // row-gap: 40px;
   align-items: start;
   margin-top: 40px;
-  padding-top: 315px;
+  padding-top: 290px;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
     column-gap: 30px;
-    row-gap: 40px;
+    row-gap: 30px;
     padding-top: 0;
     }
   @include mq("sp") {
@@ -391,17 +394,44 @@ margin: 0 auto;
 
 //カード
 .card-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px 10px;
-//  border-left: 1px solid black;
 
+}
+.card-item::before {
+  content: "";
+  display: block;
+  background: $black;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   @include mq("sp") {
-    border-left: none;
+    content: none;
   }
 }
+.card-item:first-child::before {
+  content: none;
+}
+
+.card-item:nth-child(3n)::after {
+  content: "";
+  display: block;
+  background: $black;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include mq("sp") {
+    content: none;
+  }
+}
+
 
 .card-item-img--circle {
   width: 230px;
@@ -426,9 +456,9 @@ margin: 0 auto;
 
 
 .card-item-top {
- // margin-top: 9px;
- // margin-right: 14px;
-  margin-left: -35px;
+//  margin-top: 33px;
+  margin-right: 14px;
+// margin-left: -35px;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 0.14em;
@@ -492,9 +522,11 @@ margin: 0 auto;
   max-width: 100%;
   width: 150px;
   margin-left: auto;
+  position: relative;
+  z-index: 100;
 }
 .access__cat-foot--fast{
-  margin-top: -15px;
+  margin-top: -68px;
   margin-right: 30px;
 }
 .access__cat-foot--second {
@@ -509,6 +541,20 @@ margin: 0 auto;
   top: -300px;
   right: 0;
 }
+.access__move-auto-cat__img {
+
+    max-width: 100%;
+    width: 310px;
+    height: auto;
+    margin-left: 200px;
+ // position: absolute;
+  //  top: -300px;
+  //  right: 0;
+  @include mq("md") {
+    width: 154px;
+  }
+  }
+
 
 .access__map {
   width: 100%;
@@ -537,26 +583,28 @@ margin: 0 auto;
 //フッター
 .footer {
   position: relative;
-  padding-top: 130px;
+//  padding-top: 80px;
 
-  background-image: url('../images/footer-img.svg');
+ // background-image: url('../images/footer-bg.svg');
   background-image: url('../images/footer-bg.webp');
 
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% auto; // ← 高さを167pxに指定
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;    // 上から下へ並べる
 }
 
 .footer__logo--text {
   font-weight: bold;
   padding-top: 40px;
 }
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;    // 上から下へ並べる
+.footer__logo--img img{
+  max-width: 100%;
+  width: 90%;
 }
 .footer__sns-link {
   display: block;
@@ -564,6 +612,12 @@ margin: 0 auto;
   width: 100%;
   max-width: 360px;
 }
+.footer__sns-img {
+  margin-top: 100px; // ← ここで背景の山に被らない高さまで空ける
+  z-index: 10;
+  position: relative;
+}
+
 .footer__contacts {
   display: flex;
   flex-direction: column;
@@ -590,7 +644,7 @@ margin: 0 auto;
   width: 90px;
   height: auto;
   margin-top: 20px;
-  margin-bottom: 200px;
+ // margin-bottom: 200px;
   img {
     width: 100%;
     height: auto;
