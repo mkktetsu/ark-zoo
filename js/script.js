@@ -29,12 +29,12 @@ gsap.fromTo(
     '.move-out-cat', // ←ここに新しいクラス
     {
     opacity: 0,
-    x: 100,
+    x: 0,
     y: -30,
     },
     {
     opacity: 1,
-    x: -300,
+    x: -200,
     y: 100,
     duration: 1.5,
     ease: "power2.out",
