@@ -41,7 +41,7 @@
 </head>
 
 <body>
-  <header class="header sp-none">
+  <header class="header md-none">
     <div class="header__inner">
       <div class="header__name">
         <a href="#">
@@ -68,36 +68,56 @@
   <main>
     <section class="fv">
       <div class="fv__content">
-        <div class="sp-show sns-sp-wrapper">
-          <div class="header__sns-link">
-            <a class="header__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
-              <img src="images/2x/sns-line-sp.svg" alt="LINEで友だち追加">
-            </a>
-          </div>
-          <div class="header__background">
-            <div class="header__sns-img">
-              <div class="header__sns-link">
-                <a class="header__sns-link--x-sp" href="#">
-                  <img src="images/2x/sns-x-sp.svg" alt="X（旧Twitter）のリンク" loading="lazy">
-                </a>
-              </div>
-            </div>  
-          </div>
-        </div>
+
       </div>
       <div class="about">
         <div class="inner">
-          <div class="abotu-content">
-            <h2 class="about__heading heading">ABOUT</h2>
+          <div class="abotu-content md-none">
+            <h2 class="about__heading outline-text heading">ABOUT</h2>
             <p class="about-text text">「あなたの街の頼れる行政書士」中田裕也は、地域密着型の行政書士として、皆様の身近な相談相手です。<br>
               複雑な手続きも、お客様の立場に立ってわかりやすく丁寧に説明し、安心を届けます。心と信頼を大切に、<br>
               地域の皆様の暮らしやビジネスを応援します。個人・法人問いません。皆様のお困りごとを解決します。
             </p>
-            <p class="about-text--name text">代表者	&nbsp;中田裕也</p>    
+            <p class="about-text--name text">代表者	&nbsp;<br class="md-show">中田裕也</p>
           </div>
         </div>
       </div>
+      <div class="sns-md-wrapper md-show">
+        <div class="header__sns-link">
+          <a class="header__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
+            <img src="images/2x/sns-line-sp.svg" alt="LINEで友だち追加">
+          </a>
+        </div>
+      </div>
     </section>
+    <div class="about__sp md-show">
+      <div class="about__sp__contents">
+        <div class="about__sp__content--image">
+          <picture>
+            <source srcset="images/haikei001.webp" type="image/webp">
+            <img class="color-separate" src="images/haikei001.png" alt="fvと同じ画像が背景が黒く夜を連想させます">
+          </picture>
+        </div>
+        <div class="about__sp__content--x">
+          <a class="footer__sns-link--black" href="#">
+            <img src="images/sns-x-black.svg" alt="X（旧Twitter）のリンク" loading="lazy">
+          </a>
+          <div>
+            <p class="text about__sp__content-text">
+              Xで日々の情報発信していきます。<br>フォローお願いします！
+            </p>
+          </div>
+        </div>
+        <div class="about__sp__content--about">
+          <h2 class="about__heading heading">ABOUT</h2>
+          <p class="about-text text">「あなたの街の頼れる行政書士」中田裕也は、地域密着型の行政書士として、皆様の身近な相談相手です。<br>
+            複雑な手続きも、お客様の立場に立ってわかりやすく丁寧に説明し、安心を届けます。心と信頼を大切に、<br>
+            地域の皆様の暮らしやビジネスを応援します。個人・法人問いません。皆様のお困りごとを解決します。
+          </p>
+          <p class="about-text--name text">代表者	&nbsp;中田裕也</p> 
+        </div>
+      </div>
+    </div>
 <!------↓サービス------------------↓サービス----------------------↓サービス-->
     <div class="service">
       <div class="inner">
@@ -222,12 +242,12 @@
       <!--ビジネス-----------ビジネス--------------ビジネス--------------ビジネス--------------ビジネス------->
     <div class="business">
       <div class="inner">
-        <div class="business__grid">
-          <div class="card-item card-item-top card-item-top--business">
+        <divS class="business__grid">
+          <div class="card-item card-item-top--business">
             <div class="card-item-img card-item-img--business">
               <picture>
                 <source srcset="images/business01.webp" type="image/webp">
-                <img src="images/business01.png" alt="ビジネスタイトル、招き猫の上に毎日の暮らしをサポートと、書いてある">
+                <img src="img/business01.png" alt="ビジネスタイトル、招き猫の上に毎日の暮らしをサポートと、書いてある">
               </picture>
             </div>
           </div>
@@ -326,9 +346,9 @@
             </div>
           </div>
           <!-- ...カードは追加出来ます -->
+        </divS>
         </div>
       </div>
-    </div>
     <section class="access">
       <div class="access__cat-in">
         <div class="access__cat-foot">
@@ -403,6 +423,10 @@
       </div>
     </div>
     <div class="footer__bg">
+      <picture>
+        <source srcset="images/images/footer-pc-bg.webp" type="image/webp">
+        <img src="images/" alt="">
+      </picture>
     </div>
   </footer>
 
