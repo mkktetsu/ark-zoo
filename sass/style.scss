@@ -350,6 +350,9 @@ margin: 0 auto;
   position: relative;
     width: 100%;
     max-width: 100%;
+    @include mq("md") {
+      padding-top: 150px;
+    }    
 }
 .card-item-top--business {
   transform: translateY(-34%);
@@ -428,14 +431,53 @@ margin: 0 auto;
       margin-top: 85px;
     }
     @include mq("sp") {
-      //background-image: url('../images/2x/fv-sp.jpg');
       background-size: 100% auto;
-      background-position: bottom center;
-      padding-bottom: 160px; // 背景の高さに合わせて調整
+      padding-bottom: 160px;
       margin-bottom: 30px;
     }
-  
 }
+// .business::after {
+//   content: "";
+//   position: absolute;
+//  // background: rgba(255, 0, 0, 0.3); // ← 赤で一旦テスト
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 200px; // ← フェードの高さ（調整可）
+//   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+//   z-index: 100;
+//   pointer-events: none;
+// }
+
+
+
+
+
+
+.business__bg-gradient {
+  position: absolute;
+  top:auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0) 100%);
+  z-index: 50; // 背景に回す
+  pointer-events: none;
+}
+.business__grid {
+  position: relative;
+  z-index: 100; // グラデーションより前に出す（猫なども）
+}
+
+
+
+
+
+
+
+
+
 .business__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -727,6 +769,10 @@ margin: 0 auto;
   padding-top: 40px;
   padding-right: 20px;
   padding-left: 20px;
+  text-align: center;
+  @include mq("md") {
+    font-size: 12px;
+  }
 }
 .footer__logo--img img{
   max-width: 90%;
@@ -744,6 +790,9 @@ margin: 0 auto;
   padding-top: 40px;
   width: 100%;
   max-width: 360px;
+  @include mq("md") {
+    max-width: 80%;
+  }
 }
 .footer__sns-img {
   //margin-top: 100px; // ← ここで背景の山に被らない高さまで空ける
@@ -786,16 +835,29 @@ margin: 0 auto;
 }
 
 .footer__bg {
- background-image: url('../images/footer-pc-bg.webp');
- background-size: cover;
- background-position: bottom;
- background-repeat: no-repeat;
- background-size: 100% auto; // ← 高さを167pxに指定
- width: 100%;
- max-width: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.footer__bg img {
+  display: block;
+  @include mq("md") {
+  padding-top: 30px;
+  }
 }
 
-
+.footer__copyright {
+  font-size: 12px;
+  color: $white;
+  z-index: 200;
+  margin:-40px ;
+  @include mq("sp") {
+    font-size: 12px;
+    bottom: 8px;
+  }
+}
 
 
 //共通パーツ

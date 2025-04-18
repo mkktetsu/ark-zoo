@@ -242,7 +242,8 @@
       <!--ビジネス-----------ビジネス--------------ビジネス--------------ビジネス--------------ビジネス------->
     <div class="business">
       <div class="inner">
-        <divS class="business__grid">
+        <div class="business__bg-gradient"></div>
+        <div class="business__grid">
           <div class="card-item card-item-top--business">
             <div class="card-item-img card-item-img--business">
               <picture>
@@ -346,7 +347,7 @@
             </div>
           </div>
           <!-- ...カードは追加出来ます -->
-        </divS>
+        </div>
         </div>
       </div>
     <section class="access">
@@ -386,7 +387,7 @@
       <div class="footer__logo--img">
         <img src="images/footer-logo.svg" alt="フッターロゴ">
       </div>
-      <p class="text footer__logo--text">安心と笑顔を届ける、行政手続きの頼れるパートナー</p>
+      <p class="text footer__logo--text">安心と笑顔を届ける、<br class="md-show">行政手続きの頼れるパートナー</p>
     </div>
     <div class="footer__sns-link">
       <a class="footer__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
@@ -424,10 +425,15 @@
     </div>
     <div class="footer__bg">
       <picture>
-        <source srcset="images/images/footer-pc-bg.webp" type="image/webp">
-        <img src="images/" alt="">
+        <source srcset="images/footer-sp-bg.webp" media="(max-width: 767px)" type="image/webp">
+        <source srcset="images/footer-sp-bg.svg" media="(max-width: 767px)" type="image/svg+xml">
+        <source srcset="images/footer-pc-bg.webp" type="image/webp">
+        <img src="images/footer-pc-bg.svg" alt="芝生の上に寝転んでいる猫">
       </picture>
     </div>
+    <small class="footer__copyright">&copy;2025&nbsp;ARK&nbsp;ZOO.</small>
+
+
   </footer>
 
 </body>
