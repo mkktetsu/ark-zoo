@@ -88,12 +88,13 @@ margin: 0 auto;
 }
 //ファーストビュー
 .fv {
-  aspect-ratio: 56 / 50; //
+  //aspect-ratio: 56 / 50; //
   width: 100%;
+  max-width: 100%;
   position: relative;
-  background-image: url('../images/fv.png');
+  background-image: url('../images/bg-sp.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center top;
   min-height: 100vh;
   padding-top: 260px; 
@@ -105,18 +106,34 @@ margin: 0 auto;
   align-items: center; // ← 横中央
 
   @include mq("md") {
-    background-image: url('../images/fv-sp.jpg');
+    background-image: url('../images/bg-sp.png');
     background-size: cover;
     aspect-ratio: unset;
   }
 }
-.fv__content {
-  max-width: 1000px; // 必要であれば中央幅制限
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; // 中のテキストを中央揃え
+.header__img {
+  display: flex;
 }
+.header__img--man {
+  position: relative;
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+}
+.header__img--cat {
+  position: relative;
+  width: 100%;
+  max-width: 88px;
+  height: auto;
+}
+// .fv__content {
+//  // max-width: 1000px; // 必要であれば中央幅制限
+//   width: 100%;
+//   max-width: 100%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   text-align: center; // 中のテキストを中央揃え
+// }
 
 .sns-md-wrapper {
   @include mq("sp") {
@@ -317,17 +334,6 @@ margin: 0 auto;
     }
   }
 
-
-// .card-item {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-//  // border-left: 1px solid black;
-//   @include mq("md") {
-//   border-left: none;
-//   }
-// }
 .card-item--large {
   grid-column: span 2;
   aspect-ratio: 3/1;
@@ -416,7 +422,7 @@ margin: 0 auto;
   }
 // //ビジネス
 .business {
-  background-image: url(../images/business-bg.svg);
+  background-image: url(../images/business-bg.webp);
     aspect-ratio: 56 / 50; 
     width: 100%;
     position: relative;

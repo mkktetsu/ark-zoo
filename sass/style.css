@@ -229,12 +229,12 @@ select::-ms-expand {
 }
 
 .fv {
-  aspect-ratio: 56/50;
   width: 100%;
+  max-width: 100%;
   position: relative;
-  background-image: url("../images/fv.png");
+  background-image: url("../images/bg-sp.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center top;
   min-height: 100vh;
   padding-top: 260px;
@@ -247,18 +247,28 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .fv {
-    background-image: url("../images/fv-sp.jpg");
+    background-image: url("../images/bg-sp.png");
     background-size: cover;
     aspect-ratio: unset;
   }
 }
 
-.fv__content {
-  max-width: 1000px;
+.header__img {
+  display: flex;
+}
+
+.header__img--man {
+  position: relative;
+  max-width: 120px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  height: auto;
+}
+
+.header__img--cat {
+  position: relative;
+  width: 100%;
+  max-width: 88px;
+  height: auto;
 }
 
 @media screen and (max-width: 375px) {
@@ -563,7 +573,7 @@ select::-ms-expand {
 }
 
 .business {
-  background-image: url(../images/business-bg.svg);
+  background-image: url(../images/business-bg.webp);
   aspect-ratio: 56/50;
   width: 100%;
   position: relative;
