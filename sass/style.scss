@@ -44,12 +44,16 @@
 
 }
 .header__text-message {
-  position: absolute;
-  top: 25%;
-  left: 30%;
-  max-width: 35%;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2.5px;
+  text-align: center;
+  margin-top: 40px;
+
+  @include mq("md") {
+  font-size: 14px;
+  margin-top: 20px;
+  }
 }
 .header__sns {
   gap: 10px;
@@ -90,50 +94,42 @@ margin: 0 auto;
 .fv {
   //aspect-ratio: 56 / 50; //
   width: 100%;
-  max-width: 100%;
-  position: relative;
-  background-image: url('../images/bg-sp.png');
+  background-image: url('../images/fv-bg-pc.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   min-height: 100vh;
-  padding-top: 260px; 
-  padding-right: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; // ← 下寄せ
-  align-items: center; // ← 横中央
+  padding: 100px 15px 60px; 
+  align-items: center;
 
   @include mq("md") {
     background-image: url('../images/bg-sp.png');
-    background-size: cover;
-    aspect-ratio: unset;
+    padding: 120px 15px 100px;
   }
 }
-.header__img {
+.fv__img {
   display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 40px;
+
+  @include mq("md") {
+    gap: 24px;
+    margin-top: 60px;
+  }
 }
-.header__img--man {
-  position: relative;
-  max-width: 120px;
+.fv__img--man {
+  max-width: 400px;
   width: 100%;
   height: auto;
 }
-.header__img--cat {
-  position: relative;
+.fv__img--cat {
+  max-width: 170px;
   width: 100%;
-  max-width: 88px;
   height: auto;
+
 }
-// .fv__content {
-//  // max-width: 1000px; // 必要であれば中央幅制限
-//   width: 100%;
-//   max-width: 100%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   text-align: center; // 中のテキストを中央揃え
-// }
 
 .sns-md-wrapper {
   @include mq("sp") {
@@ -208,8 +204,9 @@ margin: 0 auto;
 
 //アバウト
 .about {
-  position: absolute;
-  bottom: 10%;
+  position: relative;
+ // bottom: 10%;
+  margin-top: 40px;
   @include mq("md") {
     
     position: absolute;
@@ -249,7 +246,6 @@ margin: 0 auto;
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  text-align: justify;
   @include mq("md") {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -354,14 +350,15 @@ margin: 0 auto;
   }
 .card-item-img--business {
   position: relative;
-    width: 100%;
+    width: 400px;
     max-width: 100%;
     @include mq("md") {
       padding-top: 150px;
+      width: 300px;
     }    
 }
 .card-item-top--business {
-  transform: translateY(-34%);
+  transform: translate(-10%,-34%);
 }
 
 .card-item-title {

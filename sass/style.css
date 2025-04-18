@@ -179,12 +179,17 @@ select::-ms-expand {
 }
 
 .header__text-message {
-  position: absolute;
-  top: 25%;
-  left: 30%;
-  max-width: 35%;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2.5px;
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .header__text-message {
+    font-size: 14px;
+    margin-top: 20px;
+  }
 }
 
 .header__sns {
@@ -230,44 +235,44 @@ select::-ms-expand {
 
 .fv {
   width: 100%;
-  max-width: 100%;
-  position: relative;
-  background-image: url("../images/bg-sp.png");
+  background-image: url("../images/fv-bg-pc.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   min-height: 100vh;
-  padding-top: 260px;
-  padding-right: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  padding: 100px 15px 60px;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
   .fv {
     background-image: url("../images/bg-sp.png");
-    background-size: cover;
-    aspect-ratio: unset;
+    padding: 120px 15px 100px;
   }
 }
 
-.header__img {
+.fv__img {
   display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .fv__img {
+    gap: 24px;
+    margin-top: 60px;
+  }
 }
 
-.header__img--man {
-  position: relative;
-  max-width: 120px;
+.fv__img--man {
+  max-width: 400px;
   width: 100%;
   height: auto;
 }
 
-.header__img--cat {
-  position: relative;
+.fv__img--cat {
+  max-width: 170px;
   width: 100%;
-  max-width: 88px;
   height: auto;
 }
 
@@ -341,8 +346,8 @@ select::-ms-expand {
 }
 
 .about {
-  position: absolute;
-  bottom: 10%;
+  position: relative;
+  margin-top: 40px;
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -379,7 +384,6 @@ select::-ms-expand {
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .about-text {
@@ -500,17 +504,18 @@ select::-ms-expand {
 
 .card-item-img--business {
   position: relative;
-  width: 100%;
+  width: 400px;
   max-width: 100%;
 }
 @media screen and (max-width: 768px) {
   .card-item-img--business {
     padding-top: 150px;
+    width: 300px;
   }
 }
 
 .card-item-top--business {
-  transform: translateY(-34%);
+  transform: translate(-10%, -34%);
 }
 
 .card-item-title {
