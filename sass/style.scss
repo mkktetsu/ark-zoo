@@ -35,14 +35,21 @@
   }
 
 .header__logo {
-  max-width: 556px;
+  max-width: 280px;
   width: 100%;
   height: auto;
+  padding-left: 25px;
   @include mq("md") {
     width: 370px;
   }
 
 }
+.header__text {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .header__text-message {
   font-size: 18px;
   font-weight: bold;
@@ -94,16 +101,19 @@ margin: 0 auto;
 .fv {
   //aspect-ratio: 56 / 50; //
   width: 100%;
-  background-image: url('../images/fv-bg-pc.png');
+  max-width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/fv-pc-top.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  min-height: 100vh;
+  background-position: top left;
   padding: 100px 15px 60px; 
   align-items: center;
 
   @include mq("md") {
     background-image: url('../images/bg-sp.png');
+    background-size: cover;
+    background-position: center center;
     padding: 120px 15px 100px;
   }
 }
@@ -123,12 +133,13 @@ margin: 0 auto;
   max-width: 400px;
   width: 100%;
   height: auto;
+  transform: translate(-22%, 8%);
 }
 .fv__img--cat {
-  max-width: 170px;
+  max-width: 128px;
   width: 100%;
   height: auto;
-
+  transform: translate(65%, 15%);
 }
 
 .sns-md-wrapper {
