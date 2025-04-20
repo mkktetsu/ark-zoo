@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  height: inherit;
   @include mq("md") {
     display: block;
   }
@@ -140,7 +141,7 @@ margin: 0 auto;
    justify-content: center;
    @include mq("md") {
     top: 42%;
-    left: 54%;
+    left: 185px;
   }
 
 
