@@ -69,6 +69,10 @@
   left: 30%;
   font-weight: bold;
   letter-spacing: 2.5px;
+  @include mq("md") {
+    top: 72%;
+    text-align: center;
+  }
 }
 
 .header__sns {
@@ -110,21 +114,23 @@ margin: 0 auto;
   width: 100%;
   }
 
- .fv__img {
+.fv__img {
   position: absolute;
-   width: 100%;
-   height: auto;
-   left: 50%;
-   top: 31%;
-   transform: translateX(-50%);
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
-   @include mq("md") {
+  width: 100%;
+  height: auto;
+  left: 50%;
+  top: 31%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+
+  @include mq("md") {
     top: 42%;
-    left: 185px;
   }
 }
+
 
 .fv__img--man {
   max-width: 400px;
@@ -143,12 +149,40 @@ margin: 0 auto;
   height: auto;
   margin-right: -145px;
   @include mq("lg") {
-    margin-right: -150px;
+    margin-right: -60px;
   }
   @include mq("md") {
+    margin-right: 0;
     width: 22vw;
   }
 }
+
+
+
+.fv__img--man {
+  width: 30vw;
+  max-width: 400px;
+  height: auto;
+  margin-right: -6vw; // ← 少し左に寄せるなら調整
+  z-index: 2;
+  @include mq("md") {
+    width: 65vw;
+    margin-right: -15vw;
+  }
+}
+
+.fv__img--cat {
+  width: 10vw;
+  max-width: 140px;
+  height: auto;
+  margin-left: -6vw; // ← 少し右に寄せるなら調整
+  z-index: 1;
+  @include mq("md") {
+    width: 22vw;
+    margin-left: -10vw;
+  }
+}
+
 .sns-md-wrapper {
   @include mq("sp") {
     display: flex;
@@ -156,7 +190,7 @@ margin: 0 auto;
     justify-content: center;
     align-items: center;
     gap: 20px; 
-
+    }
     .header__sns-link {
       position: static; 
       text-align: center;
@@ -167,8 +201,6 @@ margin: 0 auto;
       width: 180px; 
       margin: 0 auto;
       @include mq("sp") {
-        padding-top: 120px;
-      }
       img {
         width: 100%;
         height: auto;
@@ -192,16 +224,15 @@ margin: 0 auto;
   .md__sns-link a {
     display: block;
     margin: 0 auto;
-    @include mq("sp") {
-      padding-top: 120px;
-    }
     img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
-
+.md__sns-link {
+  margin-top: -75px;
+}
 .header__background {
   background-image: url('../images/fv-sp.svg');
   width: 100%;
@@ -225,9 +256,9 @@ margin: 0 auto;
   display: block;
   margin-top: -385px;
   @include mq("md") {
-    
     position: absolute;
-    bottom: 10%;
+    bottom: -130px;
+    }
     @include mq("md") {
     bottom: 5%;
     }
@@ -241,7 +272,7 @@ margin: 0 auto;
     text-align: center;
     letter-spacing: 10px;
     }
-  }
+
 
 .about__heading {
   font-size: 40px;
@@ -249,6 +280,9 @@ margin: 0 auto;
   text-align: center;
   letter-spacing: 10px;
   white-space: normal;
+  @include mq("md") {
+    font-size: 36px;
+  }
 }
 .about-text {
   padding-top: 20px;
@@ -259,10 +293,22 @@ margin: 0 auto;
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 1.8;
+  @include mq("lg") {
+    text-align: start;
+  }
   @include mq("md") {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+.about-text-md {
+  @include mq("md") {
+    line-height: 1.91em;
+    letter-spacing: 0.16em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }
 .about-text--name {
   font-size: 14px;
@@ -270,7 +316,6 @@ margin: 0 auto;
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
-
 }
 
 //ｍｄの時のみの表示箇所
@@ -281,6 +326,7 @@ margin: 0 auto;
 }
 .about__sp__content--image {
   background-color: #000;
+  padding-top: 50px;
 }
 .about__sp__content--x {
   margin-top: -80px;
@@ -301,6 +347,9 @@ margin: 0 auto;
 
 .about__sp__content-text {
   font-weight: bold;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0;
 }
 .color-separate {
   background: linear-gradient(180deg,#000 50%,#fff 50%);
@@ -310,7 +359,9 @@ margin: 0 auto;
   width: 100%;
   height: auto;
 }
-
+.text--name-md {
+  font-size: 24px;
+}
 //サービス
 .service {
   margin-top: 100px;
@@ -361,15 +412,23 @@ margin: 0 auto;
   }
 .card-item-img--business {
   position: relative;
-    width: 400px;
+    width: 100%;
     max-width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
     @include mq("md") {
-      padding-top: 150px;
-      width: 300px;
+      padding-top: 65px;
+      max-width: 300px;
+
+
     }    
 }
 .card-item-top--business {
   transform: translate(-12%,-33%);
+  @include mq("md") {
+    transform: none;
+    margin: 0 auto;
+  }
 }
 
 .card-item-title {
@@ -381,7 +440,8 @@ margin: 0 auto;
     word-break: break-word;
     white-space: normal;
     @include mq("md") {
-      margin-bottom: 25px;
+      margin-bottom: 38px;
+      margin-top: -30px;
     }
 }
 .card-item-title--small {
@@ -401,6 +461,9 @@ margin: 0 auto;
     line-height: 1.6;
     text-align: left;
     padding-top: 20px;
+    @include mq("md") {
+      padding-top: 0;
+      }
   }
 
 .card-item:first-child {
@@ -422,6 +485,9 @@ margin: 0 auto;
     margin-top: 10px;
     line-height: 1.6;
     text-align: left;
+    @include mq("md") {
+      margin-top: 0;
+      }
   }
 //ビジネス
 .business {
@@ -471,7 +537,7 @@ margin: 0 auto;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
     column-gap: 30px;
-    row-gap: 30px;
+    row-gap: 0px;
     padding-top: 0;
     }
   @include mq("sp") {
@@ -480,6 +546,7 @@ margin: 0 auto;
     }
 }
 .card-item--large {
+  
   grid-column: span 2;
   @include mq("md") {
     grid-column: span 1;
@@ -582,6 +649,17 @@ img {
 }
 .card-item-body--large {
   max-width: 660px;
+}
+.card-item-text--large {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.3em;
+  @include mq("lg") {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 //アクセス--
 .office-name {
