@@ -167,7 +167,7 @@ margin: 0 auto;
   z-index: 2;
   @include mq("md") {
     width: 65vw;
-    margin-right: -15vw;
+    margin-right: -55vw;
   }
 }
 
@@ -254,17 +254,11 @@ margin: 0 auto;
 //アバウト
 .about {
   display: block;
-  margin-top: -385px;
-  @include mq("md") {
-    position: absolute;
-    bottom: -130px;
-    }
+ margin-top: -10%;
     @include mq("md") {
     bottom: 5%;
     }
-    @include mq("sp") {
-    }
-  }
+}
 
 .about__heading {
     font-size: 40px;

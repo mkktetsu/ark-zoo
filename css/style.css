@@ -326,7 +326,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .fv__img--man {
     width: 65vw;
-    margin-right: -15vw;
+    margin-right: -55vw;
   }
 }
 
@@ -420,19 +420,14 @@ select::-ms-expand {
 
 .about {
   display: block;
-  margin-top: -385px;
-}
-@media screen and (max-width: 768px) {
-  .about {
-    position: absolute;
-    bottom: -130px;
-  }
+  margin-top: -10%;
 }
 @media screen and (max-width: 768px) {
   .about {
     bottom: 5%;
   }
 }
+
 .about__heading {
   font-size: 40px;
   align-items: center;
