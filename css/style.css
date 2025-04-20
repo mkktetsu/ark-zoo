@@ -169,7 +169,14 @@ select::-ms-expand {
 
 .header__name {
   width: 34.75%;
+  min-width: 100%;
   height: auto;
+}
+@media screen and (max-width: 768px) {
+  .header__name {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .header__logo {
@@ -182,6 +189,8 @@ select::-ms-expand {
   .header__logo {
     width: 370px;
     padding-left: 0;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -261,7 +270,7 @@ select::-ms-expand {
   height: inherit;
   position: absolute;
   top: 42%;
-  left: 44%;
+  left: 50%;
 }
 
 .fv__img {

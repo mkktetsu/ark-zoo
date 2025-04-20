@@ -33,7 +33,12 @@
 }
 .header__name {
   width: 34.75%;
+  min-width: 100%;
   height: auto;
+  @include mq("md") {
+    width: 100%;
+    text-align: center;
+  }
  // flex-shrink: 0; // ロゴを縮めない
   }
 
@@ -45,6 +50,8 @@
   @include mq("md") {
     width: 370px;
     padding-left: 0;
+    margin: 0 auto;
+    display: block;
 
   }
 
@@ -117,7 +124,7 @@ margin: 0 auto;
   height: inherit;
   position: absolute;
   top: 42%;
-  left: 44%;
+  left: 50%;
 }
  .fv__img {
   position: absolute;
