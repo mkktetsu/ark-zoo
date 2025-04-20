@@ -99,47 +99,49 @@ margin: 0 auto;
 }
 //ファーストビュー
 .fv {
-  //aspect-ratio: 56 / 50; //
   width: 100%;
-  max-width: 100%;
   min-height: 100vh;
-  background-image: url('../images/fv-pc-top.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
-  padding: 100px 15px 60px; 
-  align-items: center;
-
-  @include mq("md") {
-    background-image: url('../images/bg-sp.png');
-    background-size: cover;
-    background-position: center center;
-    padding: 120px 15px 100px;
+  height: auto;
   }
+.fv__bg-img {
+  position: relative;
+  width: 100%;
+  height: inherit;
 }
-.fv__img {
-  display: flex;
-  gap: 16px;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 40px;
+ .fv__img {
+   //position: absolute;
+//   z-index: 100;
+//   display: flex;
+   width: 100%;
+   height: auto;
+//   max-width: 100%;
+//   display: flex;
+//   gap: 16px;
+//   align-items: flex-end;
+//   justify-content: center;
+//   margin-top: 40px;
 
-  @include mq("md") {
-    gap: 24px;
-    margin-top: 60px;
-  }
-}
+//   @include mq("md") {
+//     gap: 24px;
+//     margin-top: 60px;
+   }
+
 .fv__img--man {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   height: auto;
-  transform: translate(-22%, 8%);
+  position: absolute;
+  top: 20%; 
+
+
 }
 .fv__img--cat {
   max-width: 128px;
   width: 100%;
   height: auto;
-  transform: translate(65%, 15%);
+  position: absolute;
+  top: 42%;
+  left: 36%;
 }
 
 .sns-md-wrapper {
@@ -215,9 +217,8 @@ margin: 0 auto;
 
 //アバウト
 .about {
-  position: relative;
- // bottom: 10%;
-  margin-top: 40px;
+  display: block;
+  margin: 0 auto;
   @include mq("md") {
     
     position: absolute;
@@ -229,6 +230,8 @@ margin: 0 auto;
      // margin-top: 700px;
     }
   }
+
+
   .about__heading {
     font-size: 40px;
     align-items: center;
@@ -317,6 +320,7 @@ margin: 0 auto;
 .service {
   @include mq("sp") {
     margin-top: 20px;
+    display: block;
    }
 
 }

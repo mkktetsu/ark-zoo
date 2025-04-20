@@ -233,7 +233,7 @@ select::-ms-expand {
   width: 90px;
   height: auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .header__sns-link--x {
     position: static;
     margin: 0 auto;
@@ -242,53 +242,39 @@ select::-ms-expand {
 
 .fv {
   width: 100%;
-  max-width: 100%;
   min-height: 100vh;
-  background-image: url("../images/fv-pc-top.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
-  padding: 100px 15px 60px;
-  align-items: center;
+  height: auto;
 }
-@media screen and (max-width: 768px) {
-  .fv {
-    background-image: url("../images/bg-sp.png");
-    background-size: cover;
-    background-position: center center;
-    padding: 120px 15px 100px;
-  }
+
+.fv__bg-img {
+  position: relative;
+  width: 100%;
+  height: inherit;
 }
 
 .fv__img {
-  display: flex;
-  gap: 16px;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 40px;
-}
-@media screen and (max-width: 768px) {
-  .fv__img {
-    gap: 24px;
-    margin-top: 60px;
-  }
+  width: 100%;
+  height: auto;
 }
 
 .fv__img--man {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   height: auto;
-  transform: translate(-22%, 8%);
+  position: absolute;
+  top: 20%;
 }
 
 .fv__img--cat {
   max-width: 128px;
   width: 100%;
   height: auto;
-  transform: translate(65%, 15%);
+  position: absolute;
+  top: 42%;
+  left: 36%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .sns-md-wrapper {
     display: flex;
     flex-direction: column;
@@ -306,12 +292,12 @@ select::-ms-expand {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 375px) and (max-width: 375px) {
+@media screen and (max-width: 500px) and (max-width: 500px) {
   .sns-md-wrapper a {
     padding-top: 120px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .sns-md-wrapper a img {
     width: 100%;
     height: auto;
@@ -327,7 +313,7 @@ select::-ms-expand {
   display: block;
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .header__sns-link a {
     padding-top: 120px;
   }
@@ -347,7 +333,7 @@ select::-ms-expand {
   background-position: center;
   background-color: #000000;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .header__background {
     margin-top: 20px;
     padding-top: 40px;
@@ -358,8 +344,8 @@ select::-ms-expand {
 }
 
 .about {
-  position: relative;
-  margin-top: 40px;
+  display: block;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -456,9 +442,10 @@ select::-ms-expand {
   height: auto;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .service {
     margin-top: 20px;
+    display: block;
   }
 }
 
@@ -482,7 +469,7 @@ select::-ms-expand {
     margin-top: 85px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .service__grid {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 30px;
@@ -499,7 +486,7 @@ select::-ms-expand {
     aspect-ratio: 3/2;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .card-item--large {
     grid-column: span 1;
     aspect-ratio: auto;
@@ -607,7 +594,7 @@ select::-ms-expand {
     margin-top: 85px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .business {
     background-size: 100% auto;
     padding-bottom: 160px;
@@ -649,7 +636,7 @@ select::-ms-expand {
     padding-top: 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .business__grid {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 30px;
@@ -790,7 +777,7 @@ select::-ms-expand {
 .access {
   margin-top: 120px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .access {
     margin-top: 180px;
   }
@@ -825,7 +812,7 @@ select::-ms-expand {
     width: 115px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .access__cat-foot img {
     width: 80px;
   }
@@ -861,7 +848,7 @@ select::-ms-expand {
   top: -300px;
   right: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .access__move-in-cat__img {
     width: 125px;
     top: -155px;
@@ -888,7 +875,7 @@ select::-ms-expand {
   padding-bottom: 43%;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .access__map {
     height: 800px;
   }
@@ -1025,7 +1012,7 @@ select::-ms-expand {
   z-index: 200;
   margin: -40px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .footer__copyright {
     font-size: 12px;
     bottom: 8px;
@@ -1080,7 +1067,7 @@ select::-ms-expand {
     display: block;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .md-show {
     display: block;
   }
@@ -1089,7 +1076,7 @@ select::-ms-expand {
 .sp-none {
   display: block;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .sp-none {
     display: none;
   }
@@ -1098,7 +1085,7 @@ select::-ms-expand {
 .sp-show {
   display: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .sp-show {
     display: block;
   }
