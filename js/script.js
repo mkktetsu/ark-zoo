@@ -26,7 +26,7 @@ gsap.fromTo(
 
  // 2匹目（下に滑る猫）
 gsap.fromTo(
-    '.move-out-cat', // ←ここに新しいクラス
+    '.move-out-cat', 
     {
     opacity: 0,
     x: 0,
@@ -35,11 +35,11 @@ gsap.fromTo(
     {
     opacity: 1,
     x: -200,
-    y: 100,
+    y: 10,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
-        trigger: '.move-out-cat', // ←トリガーもそれに合わせて
+        trigger: '.move-out-cat', 
         start: 'top center',
     }
     }

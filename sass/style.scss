@@ -40,8 +40,7 @@
     width: 100%;
     text-align: center;
   }
- // flex-shrink: 0; // ロゴを縮めない
-  }
+}
 
 .header__logo {
   max-width: 280px;
@@ -53,7 +52,6 @@
     padding-left: 0;
     margin: 0 auto;
     display: block;
-
   }
 
 }
@@ -65,28 +63,21 @@
     justify-content: center;
   }
 }
-
 .header__text-message {
-  font-size: 18px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
   font-weight: bold;
   letter-spacing: 2.5px;
-  text-align: center;
-  margin-top: 40px;
-
-  @include mq("md") {
-  font-size: 14px;
-  margin-top: 20px;
-  }
 }
+
 .header__sns {
   gap: 10px;
   top: 20px;
   right: 20px;
 }
 .header__sns-link {
-//max-width: 240px;
 margin: 0 auto;
-
   @include mq("md") {
     max-width: 85%;
     width: 100%;
@@ -94,10 +85,10 @@ margin: 0 auto;
 }
 .header__sns-link--line {
   position: absolute;
-  top: 35px;
-  right: 37px;
+  top: 45px;
+  right: 70px;
   display: inline-block;
-  width: 25%;
+  width: 27%;
   max-width: 100%;
   height: auto;
 }
@@ -117,24 +108,14 @@ margin: 0 auto;
 .fv {
   position: relative;
   width: 100%;
- // min-height: 100vh;
-  //height: auto;
   }
-.fv__bg-img {
-  width: 100%;
-  height: inherit;
-  position: absolute;
-  top: 42%;
-  left: 50%;
-}
+
  .fv__img {
   position: absolute;
-//   z-index: 100;
-//   display: flex;
    width: 100%;
    height: auto;
-   top: 36%;
    left: 50%;
+   top: 31%;
    transform: translateX(-50%);
    display: flex;
    align-items: flex-end;
@@ -143,64 +124,47 @@ margin: 0 auto;
     top: 42%;
     left: 185px;
   }
-
-
-//   max-width: 100%;
-//   display: flex;
-//   gap: 16px;
-//   align-items: flex-end;
-//   justify-content: center;
-//   margin-top: 40px;
-
-//   @include mq("md") {
-//     gap: 24px;
-//     margin-top: 60px;
-   }
+}
 
 .fv__img--man {
-  max-width: 390px;
+  max-width: 400px;
   width: 30vw;
   height: auto;
   bottom: 8%;
   left: 36%;
   @include mq("md") {
-   // max-width: 350px;
     width: 65vw;
     transform: translate(-35%,0);
   } 
-
-
-
 }
 .fv__img--cat {
   max-width: 140px;
   width: 10vw;
   height: auto;
- // position: absolute;
- // bottom: 8%;
-  //left: 36%;
+  margin-right: -145px;
+  @include mq("lg") {
+    margin-right: -150px;
+  }
   @include mq("md") {
     width: 22vw;
   }
 }
-
 .sns-md-wrapper {
   @include mq("sp") {
     display: flex;
-    flex-direction: column; // ← 縦並びにする
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    gap: 20px; // ← 間隔をつける
+    gap: 20px; 
 
     .header__sns-link {
-      position: static; // ← 重なり防止のため
-//      width: auto;
+      position: static; 
       text-align: center;
     }
 
     a {
       display: block;
-      width: 180px; // ← 必要ならサイズ調整
+      width: 180px; 
       margin: 0 auto;
       @include mq("sp") {
         padding-top: 120px;
@@ -209,16 +173,12 @@ margin: 0 auto;
         width: 100%;
         height: auto;
         display: block;
-      //  margin: 0 auto;
       }
     }
   }
 }
-
-
 .header__sns-link a {
     display: block;
-   // width: 180px; 
     margin: 0 auto;
     @include mq("sp") {
       padding-top: 120px;
@@ -231,7 +191,6 @@ margin: 0 auto;
   }
   .md__sns-link a {
     display: block;
-   // width: 180px; 
     margin: 0 auto;
     @include mq("sp") {
       padding-top: 120px;
@@ -243,7 +202,6 @@ margin: 0 auto;
     }
   }
 
-
 .header__background {
   background-image: url('../images/fv-sp.svg');
   width: 100%;
@@ -254,8 +212,8 @@ margin: 0 auto;
   background-color: $black;
 
   @include mq("sp") {
-    margin-top: 20px; // ← 上との間に余白
-    padding-top: 40px; // ← 中のXアイコンに余裕を
+    margin-top: 20px; 
+    padding-top: 40px; 
     padding-bottom: 60px;
     position: relative;
     z-index: 1;
@@ -265,7 +223,7 @@ margin: 0 auto;
 //アバウト
 .about {
   display: block;
-  margin-top: -20vw;
+  margin-top: -385px;
   @include mq("md") {
     
     position: absolute;
@@ -274,21 +232,15 @@ margin: 0 auto;
     bottom: 5%;
     }
     @include mq("sp") {
-     // margin-top: 700px;
     }
   }
 
-
-  .about__heading {
+.about__heading {
     font-size: 40px;
     align-items: center;
     text-align: center;
     letter-spacing: 10px;
-
     }
-  }
-  @include mq("sp") {
-   // margin-top: 700px;
   }
 
 .about__heading {
@@ -310,7 +262,7 @@ margin: 0 auto;
   @include mq("md") {
     padding-left: 1rem;
     padding-right: 1rem;
-   }
+  }
 }
 .about-text--name {
   font-size: 14px;
@@ -359,12 +311,9 @@ margin: 0 auto;
   height: auto;
 }
 
-
-
-
-
 //サービス
 .service {
+  margin-top: 100px;
   @include mq("sp") {
     margin-top: 20px;
     display: block;
@@ -420,7 +369,7 @@ margin: 0 auto;
     }    
 }
 .card-item-top--business {
-  transform: translate(-10%,-34%);
+  transform: translate(-12%,-33%);
 }
 
 .card-item-title {
@@ -452,15 +401,11 @@ margin: 0 auto;
     line-height: 1.6;
     text-align: left;
     padding-top: 20px;
-   // padding-left: 1rem;
-   // padding-right: 1rem;
   }
 
-//1番目のカードだけ左ボーダーを消す
 .card-item:first-child {
   border-left: none;
 }
-//3, 6, 9... 番目のカードに右ボーダーを追加
 .card-item:nth-child(3n) {
   border-right: 1px solid black;
   @include mq("md") {
@@ -468,7 +413,6 @@ margin: 0 auto;
     }
 
 }
-//  1番目のカードだけ画像を大きく表示するスタイル
 .card-item-title img {
   max-width: 100%;
   margin: 0 auto;
@@ -479,7 +423,7 @@ margin: 0 auto;
     line-height: 1.6;
     text-align: left;
   }
-// //ビジネス
+//ビジネス
 .business {
   background-image: url(../images/business-bg.webp);
     aspect-ratio: 56 / 50; 
@@ -501,23 +445,6 @@ margin: 0 auto;
       margin-bottom: 30px;
     }
 }
-// .business::after {
-//   content: "";
-//   position: absolute;
-//  // background: rgba(255, 0, 0, 0.3); // ← 赤で一旦テスト
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 200px; // ← フェードの高さ（調整可）
-//   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
-//   z-index: 100;
-//   pointer-events: none;
-// }
-
-
-
-
-
 
 .business__bg-gradient {
   position: absolute;
@@ -527,28 +454,19 @@ margin: 0 auto;
   width: 100%;
   height: 190px;
   background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0) 100%);
-  z-index: 50; // 背景に回す
+  z-index: 50; 
   pointer-events: none;
 }
 .business__grid {
   position: relative;
-  z-index: 100; // グラデーションより前に出す（猫なども）
+  z-index: 100; 
 }
-
-
-
-
-
-
-
-
-
 .business__grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   row-gap: 25px;
   align-items: start;
-  margin-top: 40px;
+  margin-top: 90px;
   padding-top: 290px;
   @include mq("md") {
     grid-template-columns: repeat(2,1fr);
@@ -561,26 +479,13 @@ margin: 0 auto;
     row-gap: 30px;
     }
 }
-
-
- // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  // gap: 30px;
-  // margin-top: 40px;
-  // padding-top: 290px;
-
-  // @include mq("md") {
-  //   padding-top: 0;
-  // }
-
 .card-item--large {
   grid-column: span 2;
   @include mq("md") {
     grid-column: span 1;
   }
   } 
-  
 
-//カード
 .card-item {
   width: 100%;
   max-width: 100%;
@@ -591,7 +496,6 @@ margin: 0 auto;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-
 }
 .card-item::before {
   content: "";
@@ -609,7 +513,6 @@ margin: 0 auto;
 .card-item:first-child::before {
   content: none;
 }
-
 .card-item:nth-child(3n)::after {
   content: "";
   display: block;
@@ -626,46 +529,37 @@ margin: 0 auto;
     content: none;
   }
 }
-
-
 .card-item-img--circle {
   width: 100%;
   max-width: 230px;
   height: 230px;
   border-radius: 50%;
   overflow: hidden;
- border: 10px solid #fff; // 白い枠
- margin: 0 auto; // 中央に配置
+ border: 10px solid #fff; 
+ margin: 0 auto; 
   @include mq("md") {
   width: 80%;
   height: auto;
-  aspect-ratio: 1 / 1; // 正円を保つ
-}
-
-  img {
+  aspect-ratio: 1 / 1; 
+  }
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-
-
 .card-item-top {
-//  margin-top: 33px;
   margin-right: 14px;
-// margin-left: -35px;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 0.14em;
   color: #000;
   text-shadow:
     -1px -3px 0 #fff,
-     1px -3px 0 #fff,
+    1px -3px 0 #fff,
     -1px  3px 0 #fff,
-     1px  3px 0 #fff;
+    1px  3px 0 #fff;
 }
-
-
 .card-item-title {
   font-weight: bold;
   font-size: 30px;
@@ -674,10 +568,10 @@ margin: 0 auto;
   color: #000;
   text-shadow:
     -1px -3px 0 #fff,
-     1px -3px 0 #fff,
+    1px -3px 0 #fff,
     -1px  3px 0 #fff,
-     1px  3px 0 #fff;
-     @include mq("lg") {
+    1px  3px 0 #fff;
+    @include mq("lg") {
       font-size: 25px;
     }
 }
@@ -685,22 +579,11 @@ margin: 0 auto;
   margin: 0 auto;
   padding: 0 10px;
   text-align: center;
-
 }
-
 .card-item-body--large {
   max-width: 660px;
 }
-
-// .card-item-text {
-//   font-size: 14px;
-//   font-weight: bold;
-//   line-height: 1.75;
-//   padding: 30px 50px auto;
-//}
-
-//↑
-//アクセス-------------------------アクセス----------------
+//アクセス--
 .office-name {
   font-weight: bold;
   font-size: 40px;
@@ -717,11 +600,9 @@ margin: 0 auto;
   @include mq("sp") {
     margin-top: 180px;
   }
-
 }
 .access__inner {
   margin: 0 auto;
- // max-width: 1250px;
   max-width: 100%;
   padding-top: 35px;
   padding-right: 0;
@@ -773,24 +654,18 @@ margin: 0 auto;
     width: 125px;
     top: -155px;
     right: 0;
-
   }
 }
 .access__move-auto-cat__img {
     max-width: 100%;
     width: 310px;
     height: auto;
-    margin-left: 300px;
+    margin-left: 350px;
     overflow: hidden;
- // position: absolute;
-  //  top: -300px;
-  //  right: 0;
   @include mq("md") {
     width: 154px;
   }
-  }
-
-
+}
 .access__map {
   width: 100%;
   height: 0;
@@ -799,7 +674,6 @@ margin: 0 auto;
   @include mq("sp") {
     height: 800px;
   }
-
   iframe {
     position: absolute;
     width: 100%;
@@ -815,7 +689,7 @@ margin: 0 auto;
   z-index: 1000;
 }
 .office-address {
-  padding-top: 35px;
+  padding-top: 20px;
   line-height: 1.5;
 }
 //フッター
@@ -824,23 +698,30 @@ margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;    // 上から下へ並べる
+  margin-top: -110px;
+  flex-direction: column;
 }
 
 .footer__logo--text {
   margin-right: auto;
   margin-left: auto;
   font-weight: bold;
-  padding-top: 40px;
+  padding-top: 33px;
+  line-height: 1.75;
+  letter-spacing: 0.14em;
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
+
   @include mq("md") {
     font-size: 12px;
   }
 }
+.footer__logo--img {
+  margin-top: -10px;
+}
 .footer__logo--img img{
-  max-width: 90%;
+  max-width: 80%;
   width: 100%;
   margin: auto;
   @include mq("md") {
@@ -852,7 +733,7 @@ margin: 0 auto;
 }
 .footer__sns-link {
   display: block;
-  padding-top: 40px;
+  padding-top: 35px;
   width: 100%;
   max-width: 360px;
   @include mq("md") {
@@ -860,21 +741,18 @@ margin: 0 auto;
   }
 }
 .footer__sns-img {
-  //margin-top: 100px; // ← ここで背景の山に被らない高さまで空ける
   z-index: 10;
   position: relative;
 }
-
 .footer__contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; // ← テキストも中央に
+  text-align: center; 
 }
 .footer__contact{
-  padding-top: 40px;
+  padding-top: 33px;
 }
-
 .footer__contact-item--title {
   font-weight: bold;
   background-color: $gray;
@@ -890,7 +768,7 @@ margin: 0 auto;
   display: inline-block;
   width: 90px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 15px;
  // margin-bottom: 200px;
   img {
     width: 100%;
@@ -904,7 +782,6 @@ margin: 0 auto;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
 }
 .footer__bg img {
   display: block;
