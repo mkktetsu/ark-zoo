@@ -635,6 +635,9 @@ img {
     @include mq("lg") {
       font-size: 25px;
     }
+    @include mq("mdmd") {
+      font-size: 22px;
+    }
 }
 .card-item-body {
   margin: 0 auto;
