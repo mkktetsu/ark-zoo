@@ -26,6 +26,9 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  @include mq("md") {
+    display: block;
+  }
 
 }
 .header__name {
@@ -41,6 +44,8 @@
   padding-left: 25px;
   @include mq("md") {
     width: 370px;
+    padding-left: 0;
+
   }
 
 }
@@ -48,6 +53,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  @include mq("md") {
+    justify-content: center;
+  }
 }
 
 .header__text-message {
@@ -99,21 +107,36 @@ margin: 0 auto;
 }
 //ファーストビュー
 .fv {
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
-  }
-.fv__bg-img {
   position: relative;
   width: 100%;
+ // min-height: 100vh;
+  //height: auto;
+  }
+.fv__bg-img {
+  width: 100%;
   height: inherit;
+  position: absolute;
+  top: 42%;
+  left: 44%;
 }
  .fv__img {
-   //position: absolute;
+  position: absolute;
 //   z-index: 100;
 //   display: flex;
    width: 100%;
    height: auto;
+   top: 36%;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   @include mq("md") {
+    top: 42%;
+    left: 54%;
+  }
+
+
 //   max-width: 100%;
 //   display: flex;
 //   gap: 16px;
@@ -127,21 +150,30 @@ margin: 0 auto;
    }
 
 .fv__img--man {
-  max-width: 380px;
-  width: 100%;
+  max-width: 390px;
+  width: 30vw;
   height: auto;
-  position: absolute;
-  top: 20%; 
+  bottom: 8%;
+  left: 36%;
+  @include mq("md") {
+   // max-width: 350px;
+    width: 65vw;
+    transform: translate(-35%,0);
+  } 
+
 
 
 }
 .fv__img--cat {
-  max-width: 128px;
-  width: 100%;
+  max-width: 140px;
+  width: 10vw;
   height: auto;
-  position: absolute;
-  top: 42%;
-  left: 36%;
+ // position: absolute;
+ // bottom: 8%;
+  //left: 36%;
+  @include mq("md") {
+    width: 22vw;
+  }
 }
 
 .sns-md-wrapper {
@@ -175,11 +207,6 @@ margin: 0 auto;
   }
 }
 
-.header__sns-link {
- // position: static; // ← 重なり防止のため
-//      width: auto;
-  text-align: center;
-}
 
 .header__sns-link a {
     display: block;
@@ -194,7 +221,19 @@ margin: 0 auto;
       display: block;
     }
   }
-
+  .md__sns-link a {
+    display: block;
+   // width: 180px; 
+    margin: 0 auto;
+    @include mq("sp") {
+      padding-top: 120px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
 
 
 .header__background {
@@ -218,7 +257,7 @@ margin: 0 auto;
 //アバウト
 .about {
   display: block;
-  margin: 0 auto;
+  margin-top: -20vw;
   @include mq("md") {
     
     position: absolute;
@@ -659,7 +698,7 @@ margin: 0 auto;
   font-size: 40px;
   letter-spacing: 5.5px;
 }
-.ofiice-address {
+.office-address {
   font-weight: bold;
   font-size: 14px;
   padding-top: 1rem;

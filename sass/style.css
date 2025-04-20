@@ -161,6 +161,11 @@ select::-ms-expand {
   justify-content: space-between;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .header__inner {
+    display: block;
+  }
+}
 
 .header__name {
   width: 34.75%;
@@ -176,6 +181,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .header__logo {
     width: 370px;
+    padding-left: 0;
   }
 }
 
@@ -183,6 +189,11 @@ select::-ms-expand {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .header__text {
+    justify-content: center;
+  }
 }
 
 .header__text-message {
@@ -241,37 +252,59 @@ select::-ms-expand {
 }
 
 .fv {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
-  height: auto;
 }
 
 .fv__bg-img {
-  position: relative;
   width: 100%;
   height: inherit;
+  position: absolute;
+  top: 42%;
+  left: 44%;
 }
 
 .fv__img {
+  position: absolute;
   width: 100%;
   height: auto;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .fv__img {
+    top: 42%;
+    left: 54%;
+  }
 }
 
 .fv__img--man {
-  max-width: 380px;
-  width: 100%;
+  max-width: 390px;
+  width: 30vw;
   height: auto;
-  position: absolute;
-  top: 20%;
+  bottom: 8%;
+  left: 36%;
+}
+@media screen and (max-width: 768px) {
+  .fv__img--man {
+    width: 65vw;
+    transform: translate(-35%, 0);
+  }
 }
 
 .fv__img--cat {
-  max-width: 128px;
-  width: 100%;
+  max-width: 140px;
+  width: 10vw;
   height: auto;
-  position: absolute;
-  top: 42%;
-  left: 36%;
+}
+@media screen and (max-width: 768px) {
+  .fv__img--cat {
+    width: 22vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -305,10 +338,6 @@ select::-ms-expand {
   }
 }
 
-.header__sns-link {
-  text-align: center;
-}
-
 .header__sns-link a {
   display: block;
   margin: 0 auto;
@@ -319,6 +348,21 @@ select::-ms-expand {
   }
 }
 .header__sns-link a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.md__sns-link a {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+  .md__sns-link a {
+    padding-top: 120px;
+  }
+}
+.md__sns-link a img {
   width: 100%;
   height: auto;
   display: block;
@@ -345,7 +389,7 @@ select::-ms-expand {
 
 .about {
   display: block;
-  margin: 0 auto;
+  margin-top: -20vw;
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -767,7 +811,7 @@ select::-ms-expand {
   letter-spacing: 5.5px;
 }
 
-.ofiice-address {
+.office-address {
   font-weight: bold;
   font-size: 14px;
   padding-top: 1rem;

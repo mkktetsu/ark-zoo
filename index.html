@@ -43,11 +43,11 @@
 <body>
   <header class="header">
     <div class="header__inner">
-      <div class="header__name">
+      <h1 class="header__name">
         <a href="#">
-          <h1 class="fv__heading"><img class="header__logo" src="images/title-top.png" alt="ARK-ZOO"></h1>
+          <span class="fv__heading"><img class="header__logo" src="images/title-top.png" alt="ARK-ZOO"></span>
         </a>
-      </div>
+      </h1>
       
       <div class="header__text">
         <p class="header__text-message text">安心と笑顔を届ける、<br class="md-show">行政手続きの頼れるパートナー</p>
@@ -68,8 +68,10 @@
   </header>
   <main>
     <section class="fv">
-      <div class="fv__img">
+      <div class="fv__img2">
         <picture>
+          <source srcset="images/bg-sp.webp" media="(max-width: 767px)" type="image/webp">
+          <source srcset="images/bg-sp.png" media="(max-width: 767px)" type="image/svg+xml">     
           <source srcset="/images/fv-pc-top.webp" media="(min-width: 1025px)">
           <img src="images/fv-pc-top.png" alt="丘の上に建つ数件の家と青空の画像" style="width: 100%; height: auto;">
         </picture>
@@ -81,7 +83,7 @@
           <div class="inner">
             <div class="abotu-content inner">
               <h2 class="about__heading outline-text heading">ABOUT</h2>
-              <p class="about-text text">「あなたの街の頼れる行政書士」中田裕也は、地域密着型の行政書士として、皆様の身近な相談相手です。<br>
+              <p class="about-text text">「aあなたの街の頼れる行政書士」中田裕也は、地域密着型の行政書士として、皆様の身近な相談相手です。<br>
                 複雑な手続きも、お客様の立場に立ってわかりやすく丁寧に説明し、安心を届けます。心と信頼を大切に、<br>
                 地域の皆様の暮らしやビジネスを応援します。個人・法人問いません。皆様のお困りごとを解決します。
               </p>
@@ -91,39 +93,61 @@
         </div>
       </div>
     </section>
-    <div class="about md-show">
-      <div class="inner">
-        <div class="abotu-content">
-          <div class="about__heading outline-text heading">ABOUT</div>
+    <div class="md-show">
+      <div class="sns-md-wrapper">
+        <div class="md__sns-link">
+          <a class="header__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
+            <img src="images/2x/sns-line-sp.svg" alt="LINEで友だち追加">
+          </a>
+        </div>
+      </div>
+      <div class="about md-show">
+        <div class="inner">
+        </div>
+      </div>
+    </div>
+        <div class="about__sp md-show">
+      <div class="about__sp__contents">
+        <div class="about__sp__content--image">
+          <picture>
+            <source srcset="images/haikei001.webp" type="image/webp">
+            <img class="color-separate" src="images/haikei001.png" alt="fvと同じ画像が背景が黒く夜を連想させます">
+          </picture>
+        </div>
+        <div class="about__sp__content--x">
+          <a class="footer__sns-link--black" href="#">
+            <img src="images/sns-x-black.svg" alt="X（旧Twitter）のリンク" loading="lazy">
+          </a>
+          <div>
+            <p class="text about__sp__content-text">
+              Xで日々の情報発信していきます。<br>フォローお願いします！
+            </p>
+          </div>
+        </div>
+        <div class="about__sp__content--about">
+          <h2 class="about__heading heading">ABOUT</h2>
           <p class="about-text text">「あなたの街の頼れる行政書士」中田裕也は、地域密着型の行政書士として、皆様の身近な相談相手です。<br>
             複雑な手続きも、お客様の立場に立ってわかりやすく丁寧に説明し、安心を届けます。心と信頼を大切に、<br>
             地域の皆様の暮らしやビジネスを応援します。個人・法人問いません。皆様のお困りごとを解決します。
           </p>
-          <p class="about-text--name text">代表者	&nbsp;<br class="md-show">中田裕也</p>
+          <p class="about-text--name text">代表者	&nbsp;中田裕也</p> 
         </div>
       </div>
     </div>
-
-    <div class="sns-md-wrapper md-show">
-      <div class="header__sns-link">
-        <a class="header__sns-link--line-sp" href="https://contact.worksmobile.com/v2/worksat/invitation/cbdd8fbd-4d3e-40b6-bc6e-04364a53b0b6" target="_blank" rel="noopener noreferrer">
-          <img src="images/2x/sns-line-sp.svg" alt="LINEで友だち追加">
-        </a>
-      </div>
-    </div>
-<!------↓サービス------------------↓サービス----------------------↓サービス-->
+    
+<!--↓サービス-->
     <section class="service">
       <div class="inner">
         <!-- グリッド一覧 -->
         <div class="service__grid">
-          <h1 class="card-item card-item-top">
-            <div class="card-item-img">
+          <div class="card-item card-item-top">
+            <h2 class="card-item-img">
               <picture>
                 <source srcset="images/service01.webp" type="image/webp">
                 <img src="images/service01.jpg" alt="サービスタイトル、招き猫の上に毎日の暮らしをサポートと、書いてある">
               </picture>
-            </div>
-          </h1>
+            </h2>
+          </div>
           <div class="card-item">
             <div class="card-item-img card-item-img--circle">
               <picture>
@@ -358,7 +382,7 @@
       </div>
       <div class="access__office office">
         <h2 class="office-name">OFFICE</h2>
-        <div class="ofiice-address">
+        <div class="office-address">
           〒370―0823 群馬県高崎市中紺屋町37<br>HUSiz TAKASAKI 3F
         </div>
       </div>
