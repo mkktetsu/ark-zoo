@@ -71,6 +71,7 @@
   letter-spacing: 2.5px;
   @include mq("md") {
     top: 72%;
+    left: auto;
     text-align: center;
   }
 }
@@ -141,6 +142,7 @@ margin: 0 auto;
   @include mq("md") {
     width: 65vw;
     transform: translate(-35%,0);
+    margin-right: 0; // ← 修正
   } 
 }
 .fv__img--cat {
@@ -152,6 +154,7 @@ margin: 0 auto;
     margin-right: -60px;
   }
   @include mq("md") {
+    margin-left: 0; // ← 修正
     margin-right: 0;
     width: 22vw;
   }
@@ -635,7 +638,7 @@ img {
     @include mq("lg") {
       font-size: 25px;
     }
-    @include mq("mdmd") {
+    @include mq("md") {
       font-size: 22px;
     }
 }
@@ -727,7 +730,8 @@ img {
   right: 0;
   @include mq("sp") {
     width: 125px;
-    top: -155px;
+  //  top: -155px;
+    top: 0px;
     right: 0;
   }
 }
@@ -943,6 +947,7 @@ img {
 }
 
 
-  body {
+  .body {
     font-family: $base-font;
+    overflow-x: hidden; // ← 追加
   }

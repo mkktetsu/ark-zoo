@@ -216,6 +216,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .header__text-message {
     top: 72%;
+    left: auto;
     text-align: center;
   }
 }
@@ -295,6 +296,7 @@ select::-ms-expand {
   .fv__img--man {
     width: 65vw;
     transform: translate(-35%, 0);
+    margin-right: 0;
   }
 }
 
@@ -311,6 +313,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .fv__img--cat {
+    margin-left: 0;
     margin-right: 0;
     width: 22vw;
   }
@@ -869,6 +872,11 @@ select::-ms-expand {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 768px) {
+  .card-item-title {
+    font-size: 22px;
+  }
+}
 
 .card-item-body {
   margin: 0 auto;
@@ -984,7 +992,7 @@ select::-ms-expand {
 @media screen and (max-width: 500px) {
   .access__move-in-cat__img {
     width: 125px;
-    top: -155px;
+    top: 0px;
     right: 0;
   }
 }
@@ -1230,7 +1238,8 @@ select::-ms-expand {
   }
 }
 
-body {
+.body {
   font-family: "YakuHanJP", "LINE Seed JP", "Noto Sans JP";
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */
