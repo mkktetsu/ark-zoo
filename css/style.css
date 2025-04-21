@@ -181,7 +181,7 @@ select::-ms-expand {
 }
 
 .header__logo {
-  max-width: 280px;
+  max-width: 370px;
   width: 100%;
   height: auto;
   padding-left: 25px;
@@ -209,7 +209,7 @@ select::-ms-expand {
 .header__text-message {
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 28%;
   font-weight: bold;
   letter-spacing: 2.5px;
 }
@@ -365,19 +365,27 @@ select::-ms-expand {
   width: 180px;
   margin: 0 auto;
 }
-@media screen and (max-width: 500px) {
-  .sns-md-wrapper a img {
-    width: 100%;
-    height: auto;
-    display: block;
+@media screen and (max-width: 768px) {
+  .sns-md-wrapper a {
+    width: 450px;
   }
+}
+@media screen and (max-width: 500px) {
+  .sns-md-wrapper a {
+    width: 365px;
+  }
+}
+.sns-md-wrapper a img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .header__sns-link a {
   display: block;
   margin: 0 auto;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .header__sns-link a {
     padding-top: 120px;
   }
@@ -427,6 +435,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .about {
+    margin-top: -25%;
     bottom: 5%;
   }
 }
@@ -607,14 +616,14 @@ select::-ms-expand {
 .card-item-img--business {
   position: relative;
   width: 100%;
-  max-width: 100%;
   max-width: 360px;
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .card-item-img--business {
     padding-top: 65px;
-    max-width: 300px;
+    padding-right: 18px;
+    max-width: 320px;
   }
 }
 
@@ -955,7 +964,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 500px) {
   .access__cat-foot img {
-    width: 80px;
+    width: 60px;
+    padding-top: 10px;
   }
 }
 
@@ -1093,7 +1103,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .footer__sns-link {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
@@ -1123,6 +1133,7 @@ select::-ms-expand {
 
 .footer__contact-item--text {
   font-weight: bold;
+  padding-top: 10px;
 }
 
 .footer__sns-link--black {
@@ -1238,7 +1249,7 @@ select::-ms-expand {
   }
 }
 
-.body {
+body {
   font-family: "YakuHanJP", "LINE Seed JP", "Noto Sans JP";
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
