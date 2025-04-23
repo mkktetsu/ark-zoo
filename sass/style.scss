@@ -48,14 +48,18 @@
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 16px; /* ここが基準になる。1rem = 16px */
+  }
+
 //ヘッダー
 .header {
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   max-width: 100%;
   background-color: transparent;
-  height: 260px;
+  height: 16.25rem;
   padding-right:  0.9375rem;
   padding-left:  0.9375rem;
 }
@@ -73,9 +77,10 @@
 
 }
 .header__name {
-  width: 34.75%;
+  width: 27.57%;
   min-width: auto;
   height: auto;
+  z-index: 1000;
   @include mq("md") {
     width: 100%;
     text-align: center;
@@ -172,19 +177,39 @@ margin: 0 auto;
 .fv {
   position: relative;
   width: 100%;
-  }
+}
 
+.fv__background {
+  position:  absolute;
+  top: -410;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/sky.jpg'); // ←空の背景画像のパス
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -2; // 一番背面
+}
+.fv__content {
+  position: relative;
+  z-index: 10;
+}
+.fv__content picture {
+  display: block;
+  margin-top: 80px; // ←これで下に下げる（調整OK）
+}
 .fv__img {
   position: absolute;
   width: 100%;
   height: auto;
-  left: 50%;
-  top: 31%;
-  transform: translateX(-50%);
+  left: 0%;
+  top: 0%;
+  transform: translateX(-50%,-50%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden;z-index: 10;
 
   @include mq("md") {
     top: 42%;
@@ -193,11 +218,12 @@ margin: 0 auto;
 
 
 .fv__img--man {
-  max-width: 400px;
+  max-width: 25rem;
   width: 30vw;
   height: auto;
   bottom: 8%;
   left: 36%;
+  margin-left: -10vw;
   @include mq("md") {
     width: 65vw;
     transform: translate(-35%,0);
@@ -205,10 +231,9 @@ margin: 0 auto;
   } 
 }
 .fv__img--cat {
-  max-width: 140px;
+  max-width: 8.75rem;
   width: 10vw;
   height: auto;
-  margin-right: -9.0625rem;
   @include mq("lg") {
     margin-right: - 3.75rem;
   }
@@ -244,7 +269,16 @@ margin: 0 auto;
     margin-left: -10vw;
   }
 }
-
+.fv__fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; // ← 必要に応じて調整
+  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 5; // fv__background より前、他より後ろ（必要に応じて調整）
+  pointer-events: none;
+}
 .sns-md-wrapper {
   @include mq("sp") {
     position: relative;
@@ -321,21 +355,15 @@ margin: 0 auto;
 //アバウト
 .about {
   display: block;
-  margin-top: -10%;
+  margin-top: -25%;
     @include mq("md") {
       margin-top: -25%;
       bottom: 5%;
     }
 }
-
-.about__heading {
-    font-size: 2.5rem;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.625rem;
-    }
-
-
+.about-content {
+  z-index: 500;
+}
 .about__heading {
   font-size: 2.5rem;
   align-items: center;
@@ -663,22 +691,42 @@ margin: 0 auto;
   }
 }
 .card-item-img--circle {
-  width: 100%;
-  max-width: 230px;
-  height: 230px;
+  width: 50%;
+  aspect-ratio: 1 / 1; 
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
  border:  0.625rem solid #fff; 
  margin: 0 auto; 
   @include mq("md") {
   width: 80%;
-  height: auto;
-  aspect-ratio: 1 / 1; 
-  }
+}
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+  }
+}
+.card-item__img-large {
+  width: 100%; 
+  aspect-ratio: 16 / 9; // 横長に（2:1比率）
+  margin: 0 auto;
+  display: block;
+  border-radius: 1rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include mq("md") {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  @include mq("sp") {
+    aspect-ratio: 4 / 3; // スマホでは少し縦長にして高さをそろえる
   }
 }
 .card-item-top {
@@ -743,7 +791,7 @@ img {
   letter-spacing: 0.15em;
 }
 .access {
-  margin-top: 120px;
+  margin-top: 7.5rem;
   @include mq("sp") {
     margin-top: 180px;
   }
@@ -846,7 +894,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -110px;
+  margin-top: -6.875rem;
   flex-direction: column;
 }
 
@@ -952,7 +1000,7 @@ img {
 //共通パーツ
 .inner {
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 90%;
   width: 100%;
   padding-right:  1.5625rem;
   padding-left:  1.5625rem;

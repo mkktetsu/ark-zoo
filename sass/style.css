@@ -180,13 +180,17 @@ select::-ms-expand {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* ここが基準になる。1rem = 16px */
+}
+
 .header {
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   max-width: 100%;
   background-color: transparent;
-  height: 260px;
+  height: 16.25rem;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
 }
@@ -207,9 +211,10 @@ select::-ms-expand {
 }
 
 .header__name {
-  width: 34.75%;
+  width: 27.57%;
   min-width: auto;
   height: auto;
+  z-index: 1000;
 }
 @media screen and (max-width: 768px) {
   .header__name {
@@ -324,17 +329,41 @@ select::-ms-expand {
   width: 100%;
 }
 
+.fv__background {
+  position: absolute;
+  top: -410;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/sky.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.fv__content {
+  position: relative;
+  z-index: 10;
+}
+
+.fv__content picture {
+  display: block;
+  margin-top: 80px;
+}
+
 .fv__img {
   position: absolute;
   width: 100%;
   height: auto;
-  left: 50%;
-  top: 31%;
-  transform: translateX(-50%);
+  left: 0%;
+  top: 0%;
+  transform: translateX(-50%, -50%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .fv__img {
@@ -343,11 +372,12 @@ select::-ms-expand {
 }
 
 .fv__img--man {
-  max-width: 400px;
+  max-width: 25rem;
   width: 30vw;
   height: auto;
   bottom: 8%;
   left: 36%;
+  margin-left: -10vw;
 }
 @media screen and (max-width: 768px) {
   .fv__img--man {
@@ -358,10 +388,9 @@ select::-ms-expand {
 }
 
 .fv__img--cat {
-  max-width: 140px;
+  max-width: 8.75rem;
   width: 10vw;
   height: auto;
-  margin-right: -9.0625rem;
 }
 @media screen and (max-width: 1024px) {
   .fv__img--cat {
@@ -402,6 +431,17 @@ select::-ms-expand {
     width: 22vw;
     margin-left: -10vw;
   }
+}
+
+.fv__fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 5;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -486,7 +526,7 @@ select::-ms-expand {
 
 .about {
   display: block;
-  margin-top: -10%;
+  margin-top: -25%;
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -495,11 +535,8 @@ select::-ms-expand {
   }
 }
 
-.about__heading {
-  font-size: 2.5rem;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.625rem;
+.about-content {
+  z-index: 500;
 }
 
 .about__heading {
@@ -896,9 +933,9 @@ select::-ms-expand {
 }
 
 .card-item-img--circle {
-  width: 100%;
-  max-width: 230px;
-  height: 230px;
+  width: 50%;
+  aspect-ratio: 1/1;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
   border: 0.625rem solid #fff;
@@ -907,8 +944,6 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .card-item-img--circle {
     width: 80%;
-    height: auto;
-    aspect-ratio: 1/1;
   }
 }
 .card-item-img--circle img {
@@ -916,6 +951,32 @@ select::-ms-expand {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+}
+
+.card-item__img-large {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  display: block;
+  border-radius: 1rem;
+}
+.card-item__img-large img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .card-item__img-large {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-item__img-large {
+    aspect-ratio: 4/3;
+  }
 }
 
 .card-item-top {
@@ -984,7 +1045,7 @@ select::-ms-expand {
 }
 
 .access {
-  margin-top: 120px;
+  margin-top: 7.5rem;
 }
 @media screen and (max-width: 500px) {
   .access {
@@ -1115,7 +1176,7 @@ select::-ms-expand {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -110px;
+  margin-top: -6.875rem;
   flex-direction: column;
 }
 
@@ -1238,7 +1299,7 @@ select::-ms-expand {
 
 .inner {
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 90%;
   width: 100%;
   padding-right: 1.5625rem;
   padding-left: 1.5625rem;
